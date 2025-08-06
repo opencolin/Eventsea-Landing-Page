@@ -1,0 +1,68 @@
+Here’s a persuasive and concise landing page copy designed to convert event organizers into users of EventPilot. The tone is direct, efficient, and optimized for dev-centric and community-focused audiences.
+
+⸻
+
+🛠️ EventPilot
+
+The AI Copilot for Dev Conferences, Hackathons & Community Events
+
+Planning events is hard.
+EventPilot makes it easy.
+From venues to sponsors, invites to run-of-show — EventPilot automates the mess so you can focus on building a great experience.
+
+⸻
+
+✅ What You Get
+	•	📍 AI Venue Finder – Finds venues that fit your vibe, budget, and capacity
+	•	🤝 Sponsorship CRM – Auto-generates proposals, sends DocuSign agreements, tracks payments
+	•	🎙 Speaker Ops – Schedule talks, collect bios, auto-send logistics
+	•	🧾 Run of Show Builder – Drag-and-drop agenda with calendar sync
+	•	💌 Email Engine – Sends AI-written emails based on guest preferences and past attendance
+	•	🎟 Whitelabel RSVPs – Your domain, your brand. Luma and Stripe integrated.
+	•	🪑 Smart Waitlists – Auto-promote high-priority guests and notify instantly
+
+⸻
+
+💡 Built For
+	•	🏢 Developer conferences & summits
+	•	🍕 DAO-led global event series
+	•	🎓 University hackathons & tech meetups
+	•	🧬 Bio/AI/crypto demo days
+	•	🧠 Open source showcases and unconferences
+
+⸻
+
+🔌 Works With
+	•	Luma API for tickets, RSVPs, and payments
+	•	DocuSign for sponsor contracts
+	•	Resend or SendGrid for emails
+	•	Stripe for payments
+	•	Telegram / Slack for team alerts
+	•	Google Calendar / Notion for sync
+
+⸻
+
+“We used to juggle 5 tools to run a hackathon. Now we just tell EventPilot what kind of event we’re running — and it builds the whole plan for us.”
+— Community Organizer, Frontier Tower SF
+
+⸻
+
+🚀 Ready to Launch Faster?
+
+✅ Get sponsors paid
+✅ Get speakers scheduled
+✅ Get guests RSVPing
+✅ Get your time back
+
+👉 [Join the Beta]
+👉 [Book a Demo]
+👉 [Try the AI Copilot]
+
+⸻
+
+Let me know if you’d like this:
+	•	Styled as a React page (Next.js + Tailwind + Shadcn)
+	•	Converted to HTML/CSS
+	•	Packaged into a Vercel-deployable template
+
+Ready to generate the code?
