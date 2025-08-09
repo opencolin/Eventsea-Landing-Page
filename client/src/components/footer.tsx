@@ -12,14 +12,14 @@ export default function Footer() {
               </svg>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              EventPilot
+              Eventsy
             </span>
           </div>
           
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-slate-400">
             <a href="#" className="hover:text-white transition-colors" data-testid="footer-privacy">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors" data-testid="footer-terms">Terms of Service</a>
-            <a href="mailto:hello@eventpilot.ai" className="hover:text-white transition-colors" data-testid="footer-contact">Contact</a>
+            <a href="mailto:hello@eventsy.ai" className="hover:text-white transition-colors" data-testid="footer-contact">Contact</a>
             <div className="flex items-center space-x-4">
               <a href="#" className="text-slate-400 hover:text-white transition-colors" data-testid="footer-twitter">
                 <Twitter className="w-5 h-5" />
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-          <p>&copy; 2024 EventPilot. All rights reserved. Built with ❤️ for event organizers.</p>
+          <p>&copy; 2024 Eventsy. All rights reserved. Built with ❤️ for event organizers.</p>
         </div>
       </div>
     </footer>

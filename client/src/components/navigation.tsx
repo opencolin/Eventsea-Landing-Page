@@ -27,7 +27,7 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
               </svg>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              EventPilot
+              Eventsy
             </span>
           </div>
           

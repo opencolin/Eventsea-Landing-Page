@@ -66,7 +66,7 @@ export default function FeaturesSection() {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            EventPilot's AI handles the tedious stuff so you can focus on creating memorable experiences for your community.
+            Eventsy's AI handles the tedious stuff so you can focus on creating memorable experiences for your community.
           </p>
         </div>
 

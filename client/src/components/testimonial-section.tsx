@@ -14,7 +14,7 @@ export default function TestimonialSection() {
             </div>
             
             <blockquote className="text-2xl lg:text-3xl font-medium leading-relaxed mb-8 text-slate-200" data-testid="testimonial-quote">
-              "We used to juggle 5 tools to run a hackathon. Now we just tell EventPilot what kind of event we're running — and it builds the whole plan for us."
+              "We used to juggle 5 tools to run a hackathon. Now we just tell Eventsy what kind of event we're running — and it builds the whole plan for us."
             </blockquote>
             
             <div className="flex items-center justify-center space-x-4">

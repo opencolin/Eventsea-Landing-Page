@@ -32,13 +32,13 @@ export default function HeroSection({ onJoinBeta, onBookDemo }: HeroSectionProps
               <span className="text-slate-400">is hard.</span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                EventPilot
+                Eventsy
               </span>{" "}
               <span className="text-white">makes it easy.</span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
-              From venues to sponsors, invites to run-of-show — EventPilot automates the mess so you can focus on building a great experience.
+              From venues to sponsors, invites to run-of-show — Eventsy automates the mess so you can focus on building a great experience.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

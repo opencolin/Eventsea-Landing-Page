@@ -38,7 +38,7 @@ export default function BetaSignupModal({ isOpen, onClose }: BetaSignupModalProp
     },
     onSuccess: () => {
       toast({
-        title: "Welcome to EventPilot Beta!",
+        title: "Welcome to Eventsy Beta!",
         description: "We'll send you beta access and updates soon.",
       });
       form.reset();
@@ -74,7 +74,7 @@ export default function BetaSignupModal({ isOpen, onClose }: BetaSignupModalProp
           <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
             <Zap className="w-8 h-8 text-white" />
           </div>
-          <h3 className="text-2xl font-bold mb-2">Join EventPilot Beta</h3>
+          <h3 className="text-2xl font-bold mb-2">Join Eventsy Beta</h3>
           <p className="text-slate-300">Be among the first to experience AI-powered event planning</p>
         </div>
         

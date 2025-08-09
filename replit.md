@@ -1,8 +1,8 @@
-# EventPilot Landing Page
+# Eventsy Landing Page
 
 ## Overview
 
-EventPilot is a modern web application serving as a landing page for an AI-powered event management platform. The application is designed to showcase EventPilot's capabilities as an "AI Copilot for Event Organizers" that automates venue finding, sponsorship management, speaker operations, and event logistics. The landing page is built to convert visitors into beta users and demo requesters through compelling copy and streamlined signup flows.
+Eventsy is a modern web application serving as a landing page for an AI-powered event management platform. The application is designed to showcase Eventsy's capabilities as an "AI Copilot for Event Organizers" that automates venue finding, sponsorship management, speaker operations, and event logistics. The landing page is built to convert visitors into beta users and demo requesters through compelling copy and streamlined signup flows.
 
 The application features a single-page React frontend with multiple sections (hero, features, testimonials, etc.) and a minimal backend API for handling beta signups and demo requests. The design emphasizes a professional, tech-focused aesthetic with gradient elements and modern UI components.
 
