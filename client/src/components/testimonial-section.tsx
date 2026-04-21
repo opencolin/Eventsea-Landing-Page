@@ -34,22 +34,6 @@ export default function TestimonialSection() {
             <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-500 rounded-full opacity-20"></div>
             <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-500 rounded-full opacity-20"></div>
           </div>
-
-          {/* Stats section */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center" data-testid="stat-time-saved">
-              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-2">95%</div>
-              <div className="text-slate-300">Time Saved</div>
-            </div>
-            <div className="text-center" data-testid="stat-faster-setup">
-              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-2">5x</div>
-              <div className="text-slate-300">Faster Setup</div>
-            </div>
-            <div className="text-center" data-testid="stat-satisfaction">
-              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-2">100%</div>
-              <div className="text-slate-300">Satisfaction</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

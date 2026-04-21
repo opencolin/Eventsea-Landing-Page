@@ -17,9 +17,7 @@ export default function Home() {
   };
 
   const handleBookDemo = () => {
-    // In a real application, this would open a calendar booking widget
-    // For now, we'll show an alert
-    alert('Demo booking would open here (integrate with Calendly, etc.)');
+    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request";
   };
 
   const handleCloseBetaModal = () => {

@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-          <p>&copy; 2024 Eventsy. All rights reserved. Built with ❤️ for event organizers.</p>
+          <p>&copy; {new Date().getFullYear()} Eventsy. All rights reserved.</p>
         </div>
       </div>
     </footer>
