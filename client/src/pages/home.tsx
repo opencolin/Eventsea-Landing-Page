@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import AuditDeliverablesSection from "@/components/audit-deliverables-section";
+import MarketplaceLoopSection from "@/components/marketplace-loop-section";
 import FeaturesSection from "@/components/features-section";
 import BuiltForSection from "@/components/built-for-section";
 import IntegrationsSection from "@/components/integrations-section";
@@ -30,6 +31,7 @@ export default function Home() {
       <Navigation onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <HeroSection onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <AuditDeliverablesSection />
+      <MarketplaceLoopSection />
       <FeaturesSection />
       <BuiltForSection />
       <IntegrationsSection />
