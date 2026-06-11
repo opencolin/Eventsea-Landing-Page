@@ -19,6 +19,7 @@
 | **v1.5** | Planned | Team workspaces + saved views + weekly digest | `release/v1.5-teams-and-digest` | [v1.5-teams-and-digest.md](./v1.5-teams-and-digest.md) |
 | **v2.0** (marketplace track) | Planned | Marketplace transactions: sponsor matching + venue booking | `release/v2.0-marketplace-tx` | [v2.0-marketplace-tx.md](./v2.0-marketplace-tx.md) |
 | **v2.0** (skill track) | Planned | Autonomous event intelligence: Tavily discovery + Token Factory inference | (new branch) | [v2.0-autonomous-event-intel.md](./v2.0-autonomous-event-intel.md) |
+| **v2-autonomous** (deep spec) | Spec ready | Implementation-ready spec for the autonomous track — Tavily, Token Factory, Inngest orchestrator, self-rebuilding dashboard, trust gating, quality regression, 12-week sequencing | `release/prd-v2-autonomous` | [v2/autonomous-spec.md](./v2/autonomous-spec.md) |
 
 ## Council decision
 
