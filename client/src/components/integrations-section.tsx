@@ -3,8 +3,11 @@ import { Link, Zap, CheckCircle } from "lucide-react";
 export default function IntegrationsSection() {
   const integrations = [
     { name: "Luma", description: "Tickets & RSVPs", color: "bg-orange-500", hoverColor: "hover:border-orange-500/30" },
-    { name: "DocuSign", description: "Contracts", color: "bg-yellow-500", hoverColor: "hover:border-yellow-500/30" },
+    { name: "GitHub", description: "Submissions & Profiles", color: "bg-slate-700", hoverColor: "hover:border-slate-500/30" },
+    { name: "Discord", description: "Community & Teams", color: "bg-indigo-600", hoverColor: "hover:border-indigo-500/30" },
+    { name: "LinkedIn", description: "Applicant Signals", color: "bg-sky-700", hoverColor: "hover:border-sky-500/30" },
     { name: "Stripe", description: "Payments", color: "bg-purple-600", hoverColor: "hover:border-purple-500/30" },
+    { name: "DocuSign", description: "Contracts", color: "bg-yellow-500", hoverColor: "hover:border-yellow-500/30" },
     { name: "Resend", description: "Email API", color: "bg-green-500", hoverColor: "hover:border-green-500/30" },
     { name: "Slack", description: "Team Alerts", color: "bg-blue-500", hoverColor: "hover:border-blue-500/30" },
     { name: "Notion", description: "Planning Sync", color: "bg-red-500", hoverColor: "hover:border-red-500/30" }
@@ -20,7 +23,7 @@ export default function IntegrationsSection() {
     {
       icon: Zap,
       title: "AI Automates",
-      description: "Eventsy handles the cross-platform workflows",
+      description: "Eventsea handles the cross-platform workflows",
       gradient: "from-emerald-500 to-emerald-600"
     },
     {
@@ -51,7 +54,7 @@ export default function IntegrationsSection() {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Eventsy connects with the tools you already use, creating a unified workflow for event management.
+            Eventsea connects with the tools you already use, creating a unified workflow for event management.
           </p>
         </div>
 

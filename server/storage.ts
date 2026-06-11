@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type BetaSignup, type InsertBetaSignup, type DemoRequest, type InsertDemoRequest } from "@shared/schema";
+import { type User, type InsertUser, type BetaSignup, type InsertBetaSignup, type DemoRequest, type InsertDemoRequest, type CalendarAudit, type InsertCalendarAudit, type MarketplaceListing, type InsertMarketplaceListing } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -7,19 +7,27 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createBetaSignup(signup: InsertBetaSignup): Promise<BetaSignup>;
   createDemoRequest(request: InsertDemoRequest): Promise<DemoRequest>;
+  createCalendarAudit(audit: InsertCalendarAudit): Promise<CalendarAudit>;
+  createMarketplaceListing(listing: InsertMarketplaceListing): Promise<MarketplaceListing>;
   getBetaSignups(): Promise<BetaSignup[]>;
   getDemoRequests(): Promise<DemoRequest[]>;
+  getCalendarAudits(): Promise<CalendarAudit[]>;
+  getMarketplaceListings(): Promise<MarketplaceListing[]>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private betaSignups: Map<string, BetaSignup>;
   private demoRequests: Map<string, DemoRequest>;
+  private calendarAudits: Map<string, CalendarAudit>;
+  private marketplaceListings: Map<string, MarketplaceListing>;
 
   constructor() {
     this.users = new Map();
     this.betaSignups = new Map();
     this.demoRequests = new Map();
+    this.calendarAudits = new Map();
+    this.marketplaceListings = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -61,12 +69,45 @@ export class MemStorage implements IStorage {
     return request;
   }
 
+  async createCalendarAudit(insertAudit: InsertCalendarAudit): Promise<CalendarAudit> {
+    const id = randomUUID();
+    const audit: CalendarAudit = {
+      ...insertAudit,
+      id,
+      email: insertAudit.email ?? null,
+      auditType: insertAudit.auditType ?? "own",
+      createdAt: new Date(),
+    };
+    this.calendarAudits.set(id, audit);
+    return audit;
+  }
+
   async getBetaSignups(): Promise<BetaSignup[]> {
     return Array.from(this.betaSignups.values());
   }
 
   async getDemoRequests(): Promise<DemoRequest[]> {
     return Array.from(this.demoRequests.values());
+  }
+
+  async getCalendarAudits(): Promise<CalendarAudit[]> {
+    return Array.from(this.calendarAudits.values());
+  }
+
+  async createMarketplaceListing(insertListing: InsertMarketplaceListing): Promise<MarketplaceListing> {
+    const id = randomUUID();
+    const listing: MarketplaceListing = {
+      ...insertListing,
+      id,
+      details: insertListing.details ?? null,
+      createdAt: new Date(),
+    };
+    this.marketplaceListings.set(id, listing);
+    return listing;
+  }
+
+  async getMarketplaceListings(): Promise<MarketplaceListing[]> {
+    return Array.from(this.marketplaceListings.values());
   }
 }
 

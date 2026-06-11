@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
+import AuditDeliverablesSection from "@/components/audit-deliverables-section";
+import MarketplaceLoopSection from "@/components/marketplace-loop-section";
 import FeaturesSection from "@/components/features-section";
 import BuiltForSection from "@/components/built-for-section";
 import IntegrationsSection from "@/components/integrations-section";
@@ -17,9 +19,12 @@ export default function Home() {
   };
 
   const handleBookDemo = () => {
-    // In a real application, this would open a calendar booking widget
-    // For now, we'll show an alert
-    alert('Demo booking would open here (integrate with Calendly, etc.)');
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
+    if (calendlyUrl) {
+      window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request";
   };
 
   const handleCloseBetaModal = () => {
@@ -30,6 +35,8 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Navigation onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <HeroSection onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
+      <AuditDeliverablesSection />
+      <MarketplaceLoopSection />
       <FeaturesSection />
       <BuiltForSection />
       <IntegrationsSection />

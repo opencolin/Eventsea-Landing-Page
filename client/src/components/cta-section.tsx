@@ -8,10 +8,10 @@ interface CTASectionProps {
 
 export default function CTASection({ onJoinBeta, onBookDemo }: CTASectionProps) {
   const benefits = [
-    "Get sponsors paid automatically",
-    "Get speakers scheduled seamlessly",
-    "Get guests RSVPing instantly",
-    "Get your time back for big picture thinking"
+    "Organizers: launch and run any event",
+    "Sponsors: target the events your ICP attends",
+    "Venues: fill the calendar with vetted inbound",
+    "Field marketing: stack-rank every conference globally",
   ];
 
   return (
@@ -22,16 +22,16 @@ export default function CTASection({ onJoinBeta, onBookDemo }: CTASectionProps) 
             <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            <span className="text-sm text-emerald-300 font-medium">Ready to Launch Faster?</span>
+            <span className="text-sm text-emerald-300 font-medium">Every side, one platform</span>
           </div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent">
-              Get your time back.
+              The event engine
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Focus on what matters.
+              for every side of the table.
             </span>
           </h2>
           
@@ -52,7 +52,7 @@ export default function CTASection({ onJoinBeta, onBookDemo }: CTASectionProps) 
               className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-10 py-5 rounded-lg font-bold text-xl shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all transform hover:scale-105 hover:-translate-y-1"
               data-testid="cta-join-beta"
             >
-              Join the Beta →
+              Start free →
             </Button>
             <Button 
               variant="outline"
@@ -64,7 +64,7 @@ export default function CTASection({ onJoinBeta, onBookDemo }: CTASectionProps) 
             </Button>
           </div>
           
-          <p className="text-slate-400 mt-6">No credit card required • Setup in 5 minutes • Cancel anytime</p>
+          <p className="text-slate-400 mt-6">Free for small teams • Self-serve in minutes • Cancel anytime</p>
         </div>
       </div>
     </section>

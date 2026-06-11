@@ -26,6 +26,24 @@ export const demoRequests = pgTable("demo_requests", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
+export const calendarAudits = pgTable("calendar_audits", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  calendarUrl: text("calendar_url").notNull(),
+  email: text("email"),
+  auditType: text("audit_type").notNull().default("own"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const marketplaceListings = pgTable("marketplace_listings", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  listingType: text("listing_type").notNull(),
+  email: text("email").notNull(),
+  name: text("name").notNull(),
+  title: text("title").notNull(),
+  details: text("details"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -44,9 +62,27 @@ export const insertDemoRequestSchema = createInsertSchema(demoRequests).pick({
   message: true,
 });
 
+export const insertCalendarAuditSchema = createInsertSchema(calendarAudits).pick({
+  calendarUrl: true,
+  email: true,
+  auditType: true,
+});
+
+export const insertMarketplaceListingSchema = createInsertSchema(marketplaceListings).pick({
+  listingType: true,
+  email: true,
+  name: true,
+  title: true,
+  details: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertBetaSignup = z.infer<typeof insertBetaSignupSchema>;
 export type BetaSignup = typeof betaSignups.$inferSelect;
 export type InsertDemoRequest = z.infer<typeof insertDemoRequestSchema>;
 export type DemoRequest = typeof demoRequests.$inferSelect;
+export type InsertCalendarAudit = z.infer<typeof insertCalendarAuditSchema>;
+export type CalendarAudit = typeof calendarAudits.$inferSelect;
+export type InsertMarketplaceListing = z.infer<typeof insertMarketplaceListingSchema>;
+export type MarketplaceListing = typeof marketplaceListings.$inferSelect;
