@@ -7,9 +7,9 @@
 | Release | Status | Theme | Branch | Doc |
 |---|---|---|---|---|
 | **v0.1** | Shipped | Landing page + 4-sided marketplace narrative | `claude/builderbase-prd-analysis-0BjXl` | (this branch) |
-| **v0.1.1** | In-flight | Honest landing page (turnaround copy fix, Calendly env var, audit webhook) | `release/v0.1.1-honest-page` | (see commits) |
-| **v0.1.2** | In-flight | Show HN proof drop (audit-200 corpus + blog post drafts + private-audit sample) | `release/v0.1.2-show-hn-proof` | (see `docs/marketing/`) |
-| **v0.1.3** | In-flight | Sponsor outbound kit (25-target list, 5-touch sequence, pilot offer, objection handling, discovery script) | `release/v0.1.3-sponsor-outbound` | (see `docs/gtm/`) |
+| **v0.1.1** | Shipped | Honest landing page (turnaround copy fix, Calendly env var, audit webhook) | `release/v0.1.1-honest-page` (merged) | (see commits) |
+| **v0.1.2** | Shipped | Show HN proof drop (audit-200 corpus + blog post drafts + private-audit sample) | `release/v0.1.2-show-hn-proof` (merged) | (see `docs/marketing/`) |
+| **v0.1.3** | Shipped | Sponsor outbound kit (25-target list, 5-touch sequence, pilot offer, objection handling, discovery script) | `release/v0.1.3-sponsor-outbound` (merged) | (see `docs/gtm/`) |
 | **v0.2** | Planned (Sprint 2, conditional) | Make the wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
 | **v1.0** | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
@@ -22,15 +22,13 @@ The single highest-leverage next step was decided by the founding council (4 PMs
 
 Short version: **Sprint 1 runs the Founder/Ops PM's sponsor pilot validation as primary, with Marketing PM's Show HN as concurrent amplifier and GTM PM's honest-page fix as a one-day prerequisite.** Product PM's audit pipeline build (v0.2) is deferred to Sprint 2, conditional on ≥$5K revenue from Sprint 1.
 
-## Sprint 1 workstreams (in-flight)
+## Sprint 1 workstreams (all merged)
 
-Three concurrent v0.1.x sub-releases are being built in parallel git worktrees. Each is owned by a different agent and lands on its own branch. When all three are ready, they get merged into `claude/builderbase-prd-analysis-0BjXl` together.
+Three concurrent v0.1.x sub-releases were built in parallel git worktrees and merged into `claude/builderbase-prd-analysis-0BjXl` together.
 
-- **v0.1.1 engineer** — code fixes only. ~1 eng-day.
-- **v0.1.2 content** — markdown drafts under `docs/marketing/`. ~17 content-days (will continue past Sprint 1 start to deliver per-week).
-- **v0.1.3 GTM** — outbound templates under `docs/gtm/`. ~3 PM-days.
-
-When you read this and the rows above say "In-flight" but the branches don't have commits, run `git fetch origin` and check the agent task status.
+- **v0.1.1 engineer** — code fixes only. Shipped.
+- **v0.1.2 content** — 6 markdown drafts under `docs/marketing/`. Shipped (~9,970 words). Requires founder review of audit-of-ai-engineer-summit (hold for Swyx permission), audit-200 leaderboard score calibration, and YC tone before publish.
+- **v0.1.3 GTM** — 7 outbound templates under `docs/gtm/`. Shipped. Requires founder to fill in real buyer names + LinkedIn URLs + warm-intro candidates per target before sending touch 1.
 
 ## How to use this directory
 

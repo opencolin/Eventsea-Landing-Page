@@ -22,17 +22,30 @@ The 4-PM founding council (GTM, Product, Marketing, Founder/Ops) deliberated. Th
 
 Hard non-goals for Sprint 1 are codified in the decision doc — read them before suggesting any work that isn't on the list.
 
-## Sprint 1 status — three concurrent worktree workstreams
+## Sprint 1 status — three workstreams shipped + merged
 
-All three were spun up at council time and are running in parallel git worktrees:
+All three are merged into `claude/builderbase-prd-analysis-0BjXl`. The founder can start Sprint 1 outbound as soon as they (a) set the two env vars below and (b) review the founder-action items below.
 
-| Workstream | Branch | What it produces | Status |
+| Workstream | Branch | What it produced | Status |
 |---|---|---|---|
-| Honest-page engineer | `release/v0.1.1-honest-page` | Code fixes: turnaround copy, Calendly env var, audit webhook | Running (will check in on push) |
-| Show HN proof content | `release/v0.1.2-show-hn-proof` | Markdown under `docs/marketing/`: launch playbook, 4 blog posts, sample private audit, target Twitter handles | Running |
-| Sponsor outbound kit | `release/v0.1.3-sponsor-outbound` | Markdown under `docs/gtm/`: target list, pilot offer, 5-touch sequence, discovery script, objection handling, Calendly setup, account brief template | Running |
+| Honest-page engineer | `release/v0.1.1-honest-page` | 4 commits: 5-business-day turnaround copy, `AUDIT_WEBHOOK_URL` forwarding, `VITE_CALENDLY_URL` across 8 Book Demo CTAs, `.env.example` | Shipped + merged |
+| Show HN proof content | `release/v0.1.2-show-hn-proof` | 6 markdown docs under `docs/marketing/` (~9,970 words): launch playbook, audit-200 long-form, YC + AI Engineer Summit audits, sample private audit (Acme AI Infra Co.), Twitter handle list | Shipped + merged |
+| Sponsor outbound kit | `release/v0.1.3-sponsor-outbound` | 7 docs under `docs/gtm/`: 25-target list, 3-tier pilot offer ($5K/$7.5K/$15K), 5-touch sequence, discovery script, 7-objection playbook, Calendly setup, account brief template | Shipped + merged |
 
-When these three land, the integration agent merges all into `claude/builderbase-prd-analysis-0BjXl` and the human founder can start the Sprint 1 outbound on the next business day.
+### Two env vars the founder must set
+- `VITE_CALENDLY_URL` — Calendly link for Book Demo. Until set, all 8 page CTAs and the nav button fall back to `mailto:hello@eventsea.ai`.
+- `AUDIT_WEBHOOK_URL` — Slack-incoming-webhook (or any HTTPS endpoint returning 2xx) for real-time notifications of calendar audit submissions. Until set, submissions still succeed and persist in the in-memory store but the founder gets no notification.
+
+See `.env.example` at the repo root for full docs.
+
+### Founder review items before publishing externally
+- `docs/marketing/audit-of-ai-engineer-summit.md` — held for Swyx permission per the agent's note at top
+- `docs/marketing/audit-200-blog-post.md` — leaderboard scores are placeholder-calibrated; verify before Show HN
+- `docs/marketing/audit-of-yc-calendar.md` — tone check (publishing fair-use without YC's pre-blessing)
+- `docs/marketing/twitter-handles.md` — TODO handles need T-1 verification before Show HN thread
+- `docs/marketing/sample-private-audit.md` — Calendly link placeholder in Section 8
+- Per `docs/council/marketing-pm-proposal.md` — founder sign-off needed to run radar over the 4 named targets without permission
+- `docs/gtm/*` — real buyer names, LinkedIn URLs, warm-intro candidates need to be filled in per target before touch 1 ships
 
 ## Sprint 2 onward
 
