@@ -7,6 +7,7 @@
 | Release | Status | Theme | Branch | Doc |
 |---|---|---|---|---|
 | **v0.1** | Shipped | Landing page + 4-sided marketplace narrative | `claude/builderbase-prd-analysis-0BjXl` | (this branch) |
+| **v0.1.1** | Shipped | Honest landing page: 5-business-day SLO, webhook-forwarded audit submissions, Calendly-ready Book Demo CTAs | [`release/v0.1.1-honest-page`](../../../../tree/release/v0.1.1-honest-page) | (no spec — see `../council/decision.md` "Immediate fix") |
 | **v0.2** | Planned | Make the wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
 | **v1.0** | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |

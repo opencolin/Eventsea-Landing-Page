@@ -1,11 +1,18 @@
 # HANDOFF — read this first
 
-> Last updated: 2026-06-11 by Claude (council session).
-> Branch: `claude/builderbase-prd-analysis-0BjXl`.
+> Last updated: 2026-06-11 by Claude (post v0.1.1 honest-page release).
+> Branches in play: `claude/builderbase-prd-analysis-0BjXl` (integration), `release/v0.1.1-honest-page` (shipped).
 
 ## What's already in the repo
 
 A shipped landing page for Eventsea, a four-sided event marketplace (organizers, sponsors, venues, field marketing). Backend uses MemStorage. The real product (Event Radar MVP) lives separately at `event-radar-mvp.phantastic.ai` — not in this repo.
+
+**v0.1.1 "honest page" is shipped on `release/v0.1.1-honest-page`** (not yet merged). It removes the three biggest promises the page couldn't keep:
+- Calendar audit success state now promises 5 business days with concierge framing (was: "within 24 hours").
+- `POST /api/calendar-audit` forwards every submission to `AUDIT_WEBHOOK_URL` (Slack-incoming-webhook-compatible) in addition to MemStorage.
+- Every Book Demo CTA + the nav button prefer `VITE_CALENDLY_URL` and fall back to the existing `mailto:` when unset.
+
+Two env vars are required before this is fully live in prod — see `.env.example` at the repo root. Both are owned by the founder (Calendly URL + webhook URL).
 
 Read in this order:
 1. `docs/builderbase-prd-analysis.md` — positioning + gap analysis
@@ -44,11 +51,12 @@ Anything not in the release ladder (e.g., real testimonials wiring, Calendly lin
 
 ## Open questions waiting on the user (don't block on these)
 
-1. Calendly / SavvyCal link to wire to Book-a-Demo (currently `mailto:` placeholder)
-2. Real customer testimonials + logos for the testimonial section
-3. Final pricing numbers (current page says "draft pricing")
-4. Eventsea legal entity / billing address for Stripe Connect (needed for v2.0)
-5. Whether to integrate the existing `event-radar-mvp.phantastic.ai` prototype into this repo OR keep them as separate services (the council's Product PM has a recommendation in their proposal)
+1. Calendly / SavvyCal link to set as `VITE_CALENDLY_URL` (mailto: fallback still ships in the meantime)
+2. Incoming-webhook URL to set as `AUDIT_WEBHOOK_URL` so the founder sees audit submissions in real time (Slack incoming webhook recommended)
+3. Real customer testimonials + logos for the testimonial section
+4. Final pricing numbers (current page says "draft pricing")
+5. Eventsea legal entity / billing address for Stripe Connect (needed for v2.0)
+6. Whether to integrate the existing `event-radar-mvp.phantastic.ai` prototype into this repo OR keep them as separate services (the council's Product PM has a recommendation in their proposal)
 
 ## Background processes / state
 
