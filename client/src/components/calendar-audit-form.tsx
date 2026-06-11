@@ -47,6 +47,7 @@ export default function CalendarAuditForm({ variant = "hero" }: CalendarAuditFor
   const isEmailValid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim());
 
   if (status === "success") {
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
     return (
       <div className={`glass rounded-2xl p-6 ${variant === "hero" ? "" : "max-w-2xl mx-auto"}`}>
         <div className="flex items-start gap-3">
@@ -54,7 +55,24 @@ export default function CalendarAuditForm({ variant = "hero" }: CalendarAuditFor
           <div>
             <div className="font-semibold text-white mb-1">Audit queued.</div>
             <div className="text-sm text-slate-300">
-              We'll email your full audit to <span className="text-emerald-300">{email}</span> within 24 hours. Includes event-by-event scoring, copy feedback, co-sponsor matches, and a sponsor-strategy report.
+              Our team will hand-craft your audit and email it to{" "}
+              <span className="text-emerald-300">{email}</span> within 5 business days. Each report
+              is white-glove: event-by-event scoring, copy feedback, co-sponsor matches, and a
+              sponsor-strategy report — written by a human operator with the radar tool, not a
+              generic AI summary.
+            </div>
+            <div className="text-sm text-slate-300 mt-3">
+              Want to skip the queue?{" "}
+              <a
+                href={calendlyUrl ?? "mailto:hello@eventsea.ai?subject=15-min%20audit%20call"}
+                target={calendlyUrl ? "_blank" : undefined}
+                rel={calendlyUrl ? "noopener noreferrer" : undefined}
+                className="text-blue-300 hover:text-blue-200 underline underline-offset-2"
+                data-testid="audit-success-book-call"
+              >
+                Book a 15-min call
+              </a>{" "}
+              and we'll walk you through it live.
             </div>
           </div>
         </div>
