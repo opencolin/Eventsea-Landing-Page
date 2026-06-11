@@ -12,12 +12,15 @@
 | **v0.1.3** | Shipped | Sponsor outbound kit (25-target list, 5-touch sequence, pilot offer, objection handling, discovery script) | `release/v0.1.3-sponsor-outbound` (merged) | (see `docs/gtm/`) |
 | **v0.2** (marketplace track) | Planned (Sprint 2, conditional) | Make the calendar-audit wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
 | **v0.2** (skill track) | Planned (Sprint 2, conditional) | Productize the event-leads skill: CSV upload → ranked sponsor leads dashboard | (new branch) | [v0.2-lead-analysis-csv.md](./v0.2-lead-analysis-csv.md) |
+| **v1-csv-upload** (skill track) | Week 1 in flight | PRD v1 — productize the event-leads skill: CSV upload → FR9 gated dashboard. 6-week build sequence per `../council/decision-2.md`. | `release/prd-v1-csv-upload` | [v1/week-1-acceptance.md](./v1/week-1-acceptance.md) |
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
 | **v1.0** (marketplace track) | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
 | **v1.0** (skill track) | Planned | Luma API ingestion: auto-pull, auto-diff registrations | (new branch) | [v1.0-luma-api-ingestion.md](./v1.0-luma-api-ingestion.md) |
+| **v1.1-luma-api** | Spec ready | Deepened Luma API ingestion spec (auth/encryption/diff/cost/sequencing) — implementation-ready | `release/prd-v1.1-luma-api` | [v1.1/luma-api-spec.md](./v1.1/luma-api-spec.md) |
 | **v1.5** | Planned | Team workspaces + saved views + weekly digest | `release/v1.5-teams-and-digest` | [v1.5-teams-and-digest.md](./v1.5-teams-and-digest.md) |
 | **v2.0** (marketplace track) | Planned | Marketplace transactions: sponsor matching + venue booking | `release/v2.0-marketplace-tx` | [v2.0-marketplace-tx.md](./v2.0-marketplace-tx.md) |
 | **v2.0** (skill track) | Planned | Autonomous event intelligence: Tavily discovery + Token Factory inference | (new branch) | [v2.0-autonomous-event-intel.md](./v2.0-autonomous-event-intel.md) |
+| **v2-autonomous** (deep spec) | Spec ready | Implementation-ready spec for the autonomous track — Tavily, Token Factory, Inngest orchestrator, self-rebuilding dashboard, trust gating, quality regression, 12-week sequencing | `release/prd-v2-autonomous` | [v2/autonomous-spec.md](./v2/autonomous-spec.md) |
 
 ## Council decision
 

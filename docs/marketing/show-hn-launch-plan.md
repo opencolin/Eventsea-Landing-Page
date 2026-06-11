@@ -36,27 +36,37 @@ This is the playbook the founder runs the morning of the launch. Every section i
 
 ---
 
-## 2. The Show HN title (A/B in the founder's head)
+## 2. The Show HN title (post-PRD re-frame)
 
-HN allows exactly one submission. Pick one. Both are calibrated to ≤80 chars, lead with the number, and avoid "introducing" / "launching" — HN penalizes both.
+**Per `docs/council/gtm-pivot-pm-proposal.md` Day 5:** re-frame the launch around the BuilderShip artifact rather than the audit-200 corpus. The BuilderShip dashboard is sharper proof and a more concrete HN object.
 
-**Variant A (recommended):**
+HN allows exactly one submission. Pick one. Both are calibrated to ≤80 chars, lead with a number, and avoid "introducing" / "launching" — HN penalizes both. **Requires BuilderShip permission before posting.**
+
+**Variant A (recommended, post-PRD):**
+
+> `Show HN: I built a screening pipeline for a 726-person hackathon — here's the dashboard`
+
+Why A: the BuilderShip dashboard at `list.ship.builders` is a thing you can click on right now. Personal labor signal ("I built"). A specific number (726). Implies a working artifact, not a writeup.
+
+**Variant B (backup, post-PRD):**
+
+> `Show HN: We screened 726 hackathon attendees against every sponsor product — here's the gated dashboard`
+
+Why B: more specific about the pipeline mechanic (per-sponsor scoring) but longer. Use if A reads too brag-y to the founder's ear.
+
+**Variant C (fallback if BuilderShip permission blocks):**
 
 > `Show HN: I audited 200 AI conferences. Here's the leaderboard.`
 
-Why A: "I audited" signals personal labor, which HN rewards. "Leaderboard" implies ranked judgment, which is bait for "you're wrong about X" comments — engagement we want.
+The original pre-PRD framing — only use if the BuilderShip artifact cannot be referenced publicly. URL field is then `https://eventsea.ai/audit-2026` per the audit-200 corpus.
 
-**Variant B (backup):**
+**URL field (A/B):** `https://list.ship.builders` (with a comment in the HN text explaining "password is in the post body — paste it to see the gated dashboard"). NOT the homepage — the artifact is the conversion event.
 
-> `Show HN: We scored every public AI conference of 2026 (4 sub-metrics, 200 events)`
+**Text field (A/B only):**
 
-Why B: more specific, less editorial. Use if the founder's gut says variant A reads like LinkedIn bait. The "4 sub-metrics, 200 events" specificity is HN-shaped.
+> Built this for BuilderShip Yacht Hackathon. 726 registrants, all screened. 90 deep enrichment / 636 light tier (327 verified / 237 partial / 41 unscreenable). ~15 competitors caught (with explicit flags so they're not pitched the rival product). HubSpot + Salesforce CSV export validated at 726 × 22 columns. Password to see it: `{{builder_ship_show_hn_password}}`.
 
-**URL field:** `https://eventsea.ai/audit-2026` — direct to the long-form, NOT to the homepage. The homepage is the conversion surface; the blog post is the artifact HN votes on.
-
-**Text field:** leave blank. The link tells the story. If forced to add text, use:
-
-> Methodology footnote is at the bottom. The 4 sub-scores are cadence, audience quality, description craft, and co-sponsor network. Happy to answer questions about how each was computed.
+**Permission gating:** Before posting, the founder must confirm with BuilderShip that the dashboard can be referenced publicly with a shareable password. If permission is restricted to "show static screenshots only," fall back to Variant C.
 
 ---
 
