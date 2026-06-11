@@ -74,6 +74,11 @@ export default function Pricing() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
+    if (calendlyUrl) {
+      window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     window.location.href = "mailto:hello@eventsea.ai?subject=Scale%20plan%20inquiry";
   };
 

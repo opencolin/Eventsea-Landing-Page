@@ -28,6 +28,11 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
 
   const closeMobile = () => setIsMobileMenuOpen(false);
   const isAudienceActive = audienceLinks.some((l) => l.href === location);
+  // Surface the Calendly URL on the Book Demo button when it's
+  // configured so users get a real <a href> (right-click, copy link,
+  // open-in-new-tab all work). When unset, fall back to the page-level
+  // handler which uses a mailto:.
+  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
 
   return (
     <nav className="fixed top-0 w-full z-50 glass">
@@ -102,13 +107,25 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
               );
             })}
 
-            <Button
-              onClick={onBookDemo}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
-              data-testid="nav-book-demo"
-            >
-              Book Demo
-            </Button>
+            {calendlyUrl ? (
+              <Button
+                asChild
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+                data-testid="nav-book-demo"
+              >
+                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  Book Demo
+                </a>
+              </Button>
+            ) : (
+              <Button
+                onClick={onBookDemo}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+                data-testid="nav-book-demo"
+              >
+                Book Demo
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -150,16 +167,29 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
                   {link.label}
                 </WouterLink>
               ))}
-              <Button
-                onClick={() => {
-                  closeMobile();
-                  onBookDemo();
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors w-full mt-2"
-                data-testid="mobile-nav-book-demo"
-              >
-                Book Demo
-              </Button>
+              {calendlyUrl ? (
+                <Button
+                  asChild
+                  onClick={closeMobile}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors w-full mt-2"
+                  data-testid="mobile-nav-book-demo"
+                >
+                  <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                    Book Demo
+                  </a>
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => {
+                    closeMobile();
+                    onBookDemo();
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors w-full mt-2"
+                  data-testid="mobile-nav-book-demo"
+                >
+                  Book Demo
+                </Button>
+              )}
             </div>
           </div>
         )}
