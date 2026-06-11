@@ -102,6 +102,20 @@ Use `docs/gtm/5-touch-sequence.md` Touch 1 as the template.
 
 If that's true, you're on track for Week 4's primary metric (1 paid pilot signed ≥$5K).
 
+## When a pilot signs — invoke the event-leads skill
+
+Pilot delivery does NOT require you to write a custom analysis from scratch. The project-scoped `event-leads` skill (`.claude/skills/event-leads/SKILL.md`) is the canonical SOP. The wrapper doc is `docs/operations/sponsor-pilot-delivery.md`.
+
+Steps when a pilot signs:
+1. Receive registration CSV(s) from the sponsor (Luma host export).
+2. Open a Claude Code session in this project, attach the CSV.
+3. Invoke the skill with the sponsor's ICP and chosen deliverable (dashboard / xlsx / both).
+4. Spot-check the skill's flagged corrections before sending to the sponsor.
+5. Schedule the 45-min audit readout call.
+6. Log the pilot result into `docs/council/sprint-1-retro-template.md`.
+
+The skill is also Eventsea's canonical product roadmap (v1 CSV → v1.1 Luma API → v2 autonomous). When Sprint 1 hits its metric and the Sprint 2 council convenes, the obvious next build is to productize what you just did manually for the pilot.
+
 ---
 
 ## If you're stuck

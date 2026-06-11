@@ -10,17 +10,31 @@
 | **v0.1.1** | Shipped | Honest landing page (turnaround copy fix, Calendly env var, audit webhook) | `release/v0.1.1-honest-page` (merged) | (see commits) |
 | **v0.1.2** | Shipped | Show HN proof drop (audit-200 corpus + blog post drafts + private-audit sample) | `release/v0.1.2-show-hn-proof` (merged) | (see `docs/marketing/`) |
 | **v0.1.3** | Shipped | Sponsor outbound kit (25-target list, 5-touch sequence, pilot offer, objection handling, discovery script) | `release/v0.1.3-sponsor-outbound` (merged) | (see `docs/gtm/`) |
-| **v0.2** | Planned (Sprint 2, conditional) | Make the wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
+| **v0.2** (marketplace track) | Planned (Sprint 2, conditional) | Make the calendar-audit wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
+| **v0.2** (skill track) | Planned (Sprint 2, conditional) | Productize the event-leads skill: CSV upload → ranked sponsor leads dashboard | (new branch) | [v0.2-lead-analysis-csv.md](./v0.2-lead-analysis-csv.md) |
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
-| **v1.0** | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
+| **v1.0** (marketplace track) | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
+| **v1.0** (skill track) | Planned | Luma API ingestion: auto-pull, auto-diff registrations | (new branch) | [v1.0-luma-api-ingestion.md](./v1.0-luma-api-ingestion.md) |
 | **v1.5** | Planned | Team workspaces + saved views + weekly digest | `release/v1.5-teams-and-digest` | [v1.5-teams-and-digest.md](./v1.5-teams-and-digest.md) |
-| **v2.0** | Planned | Marketplace transactions: sponsor matching + venue booking | `release/v2.0-marketplace-tx` | [v2.0-marketplace-tx.md](./v2.0-marketplace-tx.md) |
+| **v2.0** (marketplace track) | Planned | Marketplace transactions: sponsor matching + venue booking | `release/v2.0-marketplace-tx` | [v2.0-marketplace-tx.md](./v2.0-marketplace-tx.md) |
+| **v2.0** (skill track) | Planned | Autonomous event intelligence: Tavily discovery + Token Factory inference | (new branch) | [v2.0-autonomous-event-intel.md](./v2.0-autonomous-event-intel.md) |
 
 ## Council decision
 
 The single highest-leverage next step was decided by the founding council (4 PMs: GTM, Product, Marketing, Founder/Ops). The council's individual proposals are in `../council/` and the synthesis is in `../council/decision.md`.
 
 Short version: **Sprint 1 runs the Founder/Ops PM's sponsor pilot validation as primary, with Marketing PM's Show HN as concurrent amplifier and GTM PM's honest-page fix as a one-day prerequisite.** Product PM's audit pipeline build (v0.2) is deferred to Sprint 2, conditional on ≥$5K revenue from Sprint 1.
+
+## Two product tracks — and the event-leads skill
+
+There are now **two parallel v0.2/v1.0/v2.0 ladders**:
+
+1. **Marketplace track** — `release/v0.2-audit-pipeline` → `release/v1.0-multitenant` → `release/v2.0-marketplace-tx`. This is the original 4-sided marketplace vision (organizers/sponsors/venues/field marketing).
+2. **Skill track** — `v0.2-lead-analysis-csv.md` → `v1.0-luma-api-ingestion.md` → `v2.0-autonomous-event-intel.md`. This is the productization of `.claude/skills/event-leads/SKILL.md` — the same SOP the founder uses to deliver Sprint 1 concierge pilots.
+
+The Sprint 2 council picks which track is primary based on what Sprint 1 reveals about willingness-to-pay. See `../council/sprint-2-brief.md` for the decision frame.
+
+**Skill-track pilots are how Sprint 1 gets fulfilled.** The skill at `.claude/skills/event-leads/SKILL.md` IS the operational SOP — see `../operations/sponsor-pilot-delivery.md` for the workflow.
 
 ## Sprint 1 workstreams (all merged)
 

@@ -11,8 +11,10 @@ Read in this order:
 1. `docs/builderbase-prd-analysis.md` — positioning + gap analysis
 2. `docs/builderbase-clone-plan.md` — original phased clone plan (predates the four-sided goal)
 3. `docs/council/decision.md` — **the canonical "what we're doing right now"**
-4. `docs/releases/README.md` — release ladder v0.1 → v2.0 with current statuses
-5. The release doc you're working on
+4. `docs/releases/README.md` — release ladder v0.1 → v2.0 with current statuses (now with two parallel tracks)
+5. `.claude/skills/event-leads/SKILL.md` — the project-scoped skill that IS the operational SOP for Sprint 1 pilot delivery AND the canonical product roadmap (v1 CSV → v1.1 Luma API → v2 autonomous)
+6. `docs/operations/sponsor-pilot-delivery.md` — how to invoke the skill when a Sprint 1 pilot signs
+7. The release doc you're working on
 
 ## What the council decided (Sprint 1)
 
@@ -47,14 +49,23 @@ See `.env.example` at the repo root for full docs.
 - Per `docs/council/marketing-pm-proposal.md` — founder sign-off needed to run radar over the 4 named targets without permission
 - `docs/gtm/*` — real buyer names, LinkedIn URLs, warm-intro candidates need to be filled in per target before touch 1 ships
 
-## Sprint 2 onward
+## Sprint 2 onward — TWO parallel tracks
 
-Branches exist on origin as placeholders. Each has a corresponding spec doc in `docs/releases/`. Pick up whichever the user directs:
-- `release/v0.2-audit-pipeline` — build the real audit pipeline (40 eng-days). CONDITIONAL on Sprint 1 revenue.
+The Sprint 2 council picks which track is primary. Branches exist on origin as placeholders for the marketplace track; the skill track has spec docs only (open new branches when the council decides).
+
+**Marketplace track (4-sided event marketplace, original vision):**
+- `release/v0.2-audit-pipeline` — calendar-audit pipeline (40 eng-days). CONDITIONAL on Sprint 1 revenue.
 - `release/v0.3-admin-and-outbound` — admin dashboard + Calendly + 20 public audit pages
-- `release/v1.0-multitenant` — auth + orgs + the radar UI port + Stripe
+- `release/v1.0-multitenant` — auth + orgs + radar UI port + Stripe
 - `release/v1.5-teams-and-digest` — team workspaces, shared views, weekly digest, Slack app
 - `release/v2.0-marketplace-tx` — Stripe Connect, sponsor matching, venue booking, ROI dashboards
+
+**Skill track (productize the event-leads skill, lead-analysis-first):**
+- `docs/releases/v0.2-lead-analysis-csv.md` — self-serve CSV → ranked sponsor leads dashboard
+- `docs/releases/v1.0-luma-api-ingestion.md` — Luma OAuth + scheduled polling + auto-diff re-screening
+- `docs/releases/v2.0-autonomous-event-intel.md` — Tavily-discovered events + Token Factory inference + self-rebuilding dashboard
+
+If the founder doesn't tell you which track, default to the skill track once Sprint 1 reports back with paid pilots — those pilots will have been DELIVERED via the skill, and productizing the operator workflow into self-serve is the obvious next move.
 
 ## How to pick up (fresh agent)
 
