@@ -31,7 +31,8 @@ Per [`founder-pm-proposal.md`](./founder-pm-proposal.md):
 - 8–12 discovery calls in Week 2
 - Proposals + close in Weeks 3–4
 - Single Stripe Atlas "batched ops" day on Day 18
-- **Primary metric: 1 paid pilot signed, wire received, ≥$5K**
+- **Primary metric: 1 paid pilot signed ≥$12.5K (Package B at post-PRD pricing) AND ≥3 discovery calls completed AND ≥1 BuilderShip-adjacent account closed** *(updated 2026-06-11 by `decision-2.md` after the PRD revealed the wedge is validated by two manual pilots)*
+- *Original metric retained for reference: 1 paid pilot signed, wire received, ≥$5K*
 
 ### Concurrent track A — Show HN proof drop (content lead, ~17 content-days)
 Per [`marketing-pm-proposal.md`](./marketing-pm-proposal.md):

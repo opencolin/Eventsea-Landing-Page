@@ -1,6 +1,8 @@
 # Sponsor Objection Handling
 
-> The 7 objections most likely to come up in Sprint 1 sponsor discovery calls + the responses the founder rehearses before Week 2. Every response has two versions: a **short** one (use on calls in the moment) and a **long** one (use in written follow-up). Both are calibrated to a buyer who is skeptical but not hostile.
+> The 8 objections most likely to come up in Sprint 1 sponsor discovery calls + the responses the founder rehearses before Week 2. Every response has two versions: a **short** one (use on calls in the moment) and a **long** one (use in written follow-up). Both are calibrated to a buyer who is skeptical but not hostile.
+>
+> **2026-06-11 update:** New objection §7 ("Will mine look like BuilderShip's on Day 1?") added post-PRD per `docs/council/gtm-pivot-pm-proposal.md` to mitigate artifact-anchor inflation when leading outbound with the BuilderShip dashboard. Old §7 (white-label / agency reseller) renumbered to §8.
 >
 > **General rule:** Acknowledge first. Reframe second. Concede when the objection is real (we have no customer ROI data; we are not SOC 2). Don't lie. The honest answer is *also* the highest-converting answer at this stage.
 
@@ -167,7 +169,47 @@ If they say "come back when you have customers" — that's a no. Don't argue. As
 
 ---
 
-## 7. (Bonus) "Can you white-label this / can our agency resell it?"
+## 7. "Will mine look exactly like BuilderShip's on Day 1?"
+
+**What they actually mean:** They saw `list.ship.builders` in touch 1 and assume that's the Day-1 SLA, not the Day-21–28 finished state.
+
+### Short response (on call)
+
+> "It will look like BuilderShip's by Day 14 — the *first cycle* of the same mechanic. BuilderShip's dashboard is what 5 update cycles look like; yours starts as cycle 1. Day 14 you get light tier complete, deep tier complete for the top decile, V/P/U verdicts visible, score columns populated, flags surfaced. Day 21–28 it looks like BuilderShip's. We staged the delivery in the proposal — let me walk you through the Day-1/7/14 milestones."
+
+### Long response (in follow-up)
+
+> Great question — and one we want to set expectations on hard up front because nothing damages a pilot faster than Day-2 expectation drift.
+>
+> `list.ship.builders` is BuilderShip's *finished* dashboard. It exists because we ran 5 update cycles over the registration window, captured sponsor-side feedback after each, and had access to the host's registration backfill. That polish compounds.
+>
+> Your Day-14 dashboard is the **first cycle** of the same mechanic:
+> - 100% of attendees screened (light tier for ~90%, deep tier for the top decile).
+> - V/P/U verdicts (V = identity + company verified; P = identity found, claims unconfirmed; U = unscreenable).
+> - Per-sponsor score columns populated (your 3 products with conflict overrides applied).
+> - Competitor / investor / sponsor-staff flags surfaced.
+> - Filter + sort + search.
+> - HubSpot/Salesforce CSV export (Package C).
+>
+> What gets *better* between Day 14 and Day 21–28 (without us doing more work — it's automatic as RSVPs roll in):
+> - Influence rankings stabilize as we re-fetch X/GitHub follower counts.
+> - Duplicate-attendee linking improves as more people register.
+> - "Claims unconfirmed" rows drop as more web sources catch up.
+> - Top-N builders curation runs (Day 21).
+>
+> The BuilderShip dashboard is the proof point, not the SLA. We promise the Day-14 quality baseline. We deliver the BuilderShip-equivalent polish by Day 28.
+
+### Tell signal
+
+If they say "I need the BuilderShip-level polish by Day 1" — they're underestimating the screening work, but more importantly they're treating this as a brochure-to-product comparison instead of cycle 1 of a 4-cycle process. Push back gently: "BuilderShip took 5 cycles. The first 5 days of BuilderShip looked like what your Day 14 will look like. Same trajectory, same destination — we're not promising to skip the work, we're promising the work delivers."
+
+### When to walk away
+
+If they keep pushing for BuilderShip-level Day 1 even after the staged-delivery walk-through — they want the case study, not the service. They aren't a pilot fit. Politely close: "Sounds like you need a finished reference, not a pilot. Happy to revisit in Q4 when we have 5 closed pilots running." Don't discount, don't bend the SLA.
+
+---
+
+## 8. (Bonus) "Can you white-label this / can our agency resell it?"
 
 **What they actually mean:** They want to skip the buy and become a channel partner.
 
@@ -183,6 +225,6 @@ If they push hard on the partner path before buying — they're not in ICP. Poli
 ## Cross-cutting principles
 
 1. **Honest > clever.** Every objection here has a "we don't have that yet" answer. Lead with that. The buyers who reject the honest answer were never going to close in Sprint 1.
-2. **Don't drop the price below $7.5K on Package B.** If they balk at $7.5K, offer Package A at $5K — but don't discount B itself, ever. Discounting B teaches the market that the anchor is soft.
+2. **Don't drop the price below $12.5K on Package B** *(post-PRD pricing, see `sponsor-pilot-offer.md`)*. If they balk at $12.5K, offer Package A at $7.5K — but don't discount B itself, ever. Discounting B teaches the market that the anchor is soft.
 3. **Push for a date, not a feeling.** Every objection should end with "what's the next step + when." Otherwise the deal slips silently.
 4. **Log every objection.** Per Founder/Ops PM proposal §5 secondary metric: 12 documented sponsor objections feed the Week 5 landing rebuild brief.

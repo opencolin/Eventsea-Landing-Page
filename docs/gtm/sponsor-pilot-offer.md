@@ -1,8 +1,8 @@
 # Eventsea Sponsor Pilot — Q3 2026
 
-> Prospect-facing proposal. Send as PDF (export from Notion / Google Doc) after a discovery call with a buying signal. Three tiers anchored on $5K / $7.5K / $15K — Founder/Ops PM's proposal §2 "Concrete offer."
+> Prospect-facing proposal. Send as PDF (export from Notion / Google Doc) after a discovery call with a buying signal. Three tiers anchored on **$7.5K / $12.5K / $25K** — post-PRD repricing per `docs/council/gtm-pivot-pm-proposal.md`.
 >
-> **Sales note (internal, strip before send):** $7.5K is the recommended anchor. Lead with the middle tier; the $5K is a fallback for "no budget approval needed today" and the $15K is the upsell for buyers who'd rather buy quarterly than re-procure.
+> **Sales note (internal, strip before send):** $12.5K (Package B) is the recommended anchor. The BuilderShip artifact (`list.ship.builders` — 726 attendees, gated dashboard, HubSpot+Salesforce export validated at 726×22) is the evidence that justifies the new anchor. The $7.5K Package A is the fallback for "no budget approval needed today." The $25K Package C is the upsell for buyers running multi-event quarterly programs with active sales pipelines.
 
 ---
 
@@ -16,7 +16,7 @@ This pilot is a paid, time-boxed engagement to prove ROI on your next quarter of
 
 ## The three packages
 
-### Package A — Single Event Pilot · **$5,000**
+### Package A — Single Event Pilot · **$7,500**
 
 For sponsors who want to test one event before committing to a quarter.
 
@@ -28,59 +28,60 @@ For sponsors who want to test one event before committing to a quarter.
 
 **Timeline:** 14 days from kickoff to plan delivered.
 
-**Success metric (we promise):** ≥1 sponsor-ready event recommendation with a co-investor list and an organizer intro, delivered within 14 days. If we miss this, you get your $5K back — no haggling.
+**Success metric (we promise):** ≥1 sponsor-ready event recommendation with a co-investor list and an organizer intro, delivered within 14 days. If we miss this, you get your $7.5K back — no haggling.
 
 **NOT included**
 - Multi-event ranking
 - Attribution PDF
-- Dashboard access
+- Dashboard access (the BuilderShip-style gated lead dashboard is Package B and up)
 - Organizer introductions beyond the one event
 - Custom audience research outside the one recommendation
 
 ---
 
-### Package B — Quarterly Recommendation + Attribution · **$7,500** *(recommended)*
+### Package B — Quarterly Recommendation + Attribution + **Gated Lead Dashboard** · **$12,500** *(recommended)*
 
-For sponsors who want to plan a full quarter of event presence and measure what worked.
+For sponsors who want to plan a full quarter of event presence, measure what worked, and walk into each event with a verified, scored lead list ready for the sales team.
 
 **You get**
 - A ranked recommendation of **3 events** to sponsor next quarter, drawn from a curated radar of 200+ AI-builder events.
 - A sponsor-fit report per event (10–15 pages total): audience composition, co-sponsor diligence, audience-overlap %, recommended booth/talk/track activation.
+- **Gated lead dashboard** (the BuilderShip mechanic) for each sponsored event: every attendee screened, verified against live web sources, scored per your products (V/P/U verdicts), influence-ranked, with competitor/investor/sponsor-staff flags. Delivered behind a password-gated URL. See `list.ship.builders` for a live reference.
 - **Attribution PDF** delivered 14 days after your last sponsored event: registrations captured, check-ins, prototypes shipped attributable to your sponsor track, sponsor mention sentiment, recommended next-quarter changes.
 - 2 organizer introductions (warm).
 - Two 30-min calls: kickoff + post-quarter readout.
 
-**Timeline:** 30 days from kickoff to recommendation delivered. Attribution PDF delivered 14 days after the last sponsored event.
+**Timeline:** 30 days from kickoff to recommendation delivered. Per-event dashboard live by Day 14 of each event. Attribution PDF delivered 14 days after the last sponsored event.
 
-**Success metric (we promise):** 3 ranked event recommendations + 2 organizer intros within 30 days, attribution PDF within 14 days of last event. If we miss either deadline, the next quarter is free.
+**Success metric (we promise):** 3 ranked event recommendations + 2 organizer intros + lead dashboard live for each event by Day 14 + attribution PDF within 14 days of last event. If we miss any deadline, the next quarter is free.
 
 **NOT included**
-- Live dashboard (delivered as PDF only)
+- 1-click HubSpot / Salesforce CSV export (that's Package C)
 - More than 2 organizer intros
 - Lead-list rentals from organizers (depends on each organizer's terms)
-- Custom dashboards or API access
-- Quarterly renewals — this is a one-time pilot
+- Direct API push to your CRM (that's v1.1+ — CSV import-wizard compatibility is the Package B contract)
+- Quarterly renewals — this is a single-quarter pilot
 
 ---
 
-### Package C — Quarterly Program + Live Dashboard + Organizer Network · **$15,000**
+### Package C — Multi-Event Quarterly Program + Dashboard + **1-Click CRM Export** · **$25,000**
 
-For sponsors who want event sponsorship treated as a measurable line item, not a marketing guess.
+For sponsors who want event sponsorship treated as a measurable line item with leads flowing into HubSpot or Salesforce on Day 1.
 
 **You get**
 - Everything in Package B, plus:
 - A ranked recommendation of **up to 6 events** for the quarter (vs 3 in Package B).
-- A **live dashboard** (web URL, refreshed weekly) of pipeline events, audience-overlap %, and post-event attribution.
+- **1-click HubSpot CSV + Salesforce CSV export** from every gated lead dashboard. UTF-8 BOM for Excel; current-filter aware; per-CRM import-wizard tested column mapping (BuilderShip's exact 726×22 schema with First/Last Name, Email, Phone, Company, Job Title, Website/LinkedIn URLs, X Handle + every analysis column as custom property). Sponsor's sales team imports without you touching anything.
 - Up to **5 organizer introductions** across the quarter.
 - A **mid-quarter check-in call** (45 min) to re-rank events based on what you've learned.
 - A 1-page "board-ready" attribution summary suitable for your finance / leadership team.
 
-**Timeline:** 30 days from kickoff to first recommendation. Dashboard live at day 14. Mid-quarter call at day 45. Attribution PDF + board summary 14 days after last sponsored event.
+**Timeline:** 30 days from kickoff to first recommendation. Per-event dashboard live by Day 14. Mid-quarter call at day 45. Attribution PDF + board summary 14 days after last sponsored event.
 
-**Success metric (we promise):** 6 ranked event recommendations + 5 organizer intros + dashboard live by day 14 + mid-quarter re-rank by day 45. Same money-back if we miss.
+**Success metric (we promise):** 6 ranked event recommendations + 5 organizer intros + lead dashboards live by Day 14 per event + 1-click HubSpot/Salesforce CSV export tested against your CRM + mid-quarter re-rank by day 45. Same money-back if we miss.
 
 **NOT included**
-- Custom integrations to your CRM (manual export only)
+- Direct API push to your CRM (CSV import-wizard is the v1 contract; direct push lands in v1.1+)
 - Lead lists from organizers (subject to each organizer's terms)
 - Sponsorship execution / booth-staffing (we recommend; you sponsor)
 - Annual contract — this is a single-quarter pilot
@@ -99,15 +100,23 @@ You approve the testimonial copy before publication. You can opt out at any time
 
 ## 30-day delivery promise (Package B walk-through)
 
-| Week | Founder delivers | Sponsor delivers |
+| Milestone | Founder delivers | Sponsor delivers |
 |---|---|---|
-| **Week 1** (Days 1–7) | Kickoff call. Pull your audience definition. Run radar against your ICP slider. Draft top-10 event longlist. | A 15-min onboarding form: ICP description, current event spend, prior sponsorships in last 6 months. |
-| **Week 2** (Days 8–14) | Co-sponsor diligence on shortlist. Audience-overlap scoring. Draft sponsor-fit reports for top 3. | Review of longlist; veto / boost signal on any of the 10. |
-| **Week 3** (Days 15–21) | Final 3 event recommendations + sponsor-fit reports delivered as PDF. First organizer intro warmed. | Decision on which event(s) to sponsor. |
-| **Week 4** (Days 22–30) | Second organizer intro warmed. Sponsorship contracts handed off to your team. Attribution tracking set up. | Sign sponsorship contracts directly with organizers. |
-| **Post-event (Day 14 after last event)** | Attribution PDF + 30-min readout call. | Approve case-study quote (optional, for discount). |
+| **Day 1** — Kickoff | Kickoff call. Capture your ICP (in your own words, plus 3 named target accounts). Define the 3 sponsor products we'll score on. | A 15-min onboarding form: ICP description, current event spend, prior sponsorships in last 6 months. |
+| **Day 1–7** — Discovery | Pull audience definition. Run radar against your ICP slider. Draft top-10 event longlist. Co-sponsor diligence on shortlist. | Sponsor data readiness: registration CSV(s) for the events you fund OR Luma host access. ICP-product list confirmed. |
+| **Day 7** — Light tier complete | First-pass screening done. V/P/U verdicts assigned. Competitor/investor/sponsor-staff flags surfaced. | Review the early flag set for any false-competitor calls. |
+| **Day 8–14** — Deep tier + dashboard | Deep enrichment on top decile. Influence ranking (X + GitHub followers). Sponsor-fit reports drafted. **Gated dashboard goes live by Day 14.** | Review longlist; veto / boost signal on any of the 10. |
+| **Day 15–21** — Recommendation | Final 3 event recommendations + sponsor-fit reports delivered as PDF. First organizer intro warmed. | Decision on which event(s) to sponsor. |
+| **Day 22–30** — Quarterly handoff | Second organizer intro warmed. Sponsorship contracts handed off to your team. Attribution tracking set up. | Sign sponsorship contracts directly with organizers. |
+| **Day 14 after last event** — Wrap | Attribution PDF + 30-min readout call. | Approve case-study quote (optional, for discount). |
 
-Package A compresses this into 14 days (recommendation only). Package C adds a dashboard live at day 14 + mid-quarter re-rank at day 45.
+Package A compresses this into 14 days (single-event recommendation only — no dashboard, no attribution PDF). Package C adds 1-click HubSpot/Salesforce CSV export per dashboard + mid-quarter re-rank at day 45.
+
+### Important: what "Day 14 dashboard" means vs. what `list.ship.builders` shows
+
+`list.ship.builders` is BuilderShip's *finished* dashboard — produced over 5 update cycles with full sponsor-side feedback access. Your Day-14 dashboard is the **first cycle** of the same mechanic: light tier complete, deep tier complete for the top decile, V/P/U verdicts visible, score columns populated, flags surfaced. The polish you see on `list.ship.builders` is what we iterate toward across cycles 2–5 of your event — by Day 21–28, your dashboard looks equivalent.
+
+This is not a Day-1 SLA. It's a Day-14 quality baseline that compounds.
 
 ---
 
