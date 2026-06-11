@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import BetaSignupModal from "@/components/beta-signup-modal";
 import { Button } from "@/components/ui/button";
 import { CalendarRange, Compass, ShieldCheck, BadgeDollarSign, Star, Camera } from "lucide-react";
+import ListingForm from "@/components/listing-form";
 
 export default function Venues() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
@@ -114,7 +115,30 @@ export default function Venues() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">List your space.</span>{" "}
+              <span className="bg-gradient-to-r from-orange-400 to-emerald-400 bg-clip-text text-transparent">Get matched to organizers.</span>
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Give us the basics and we'll surface your venue to organizers actively planning events that fit your capacity, vibe, and budget.
+            </p>
+          </div>
+          <ListingForm
+            listingType="venue"
+            heading="Tell us about your venue"
+            subheading="Name + email so we can reach you, plus a short description of the space."
+            titlePlaceholder="Venue name (e.g., Frontier Tower SF — 7th floor)"
+            detailsPlaceholder="Capacity by layout, location, AV setup, Wi-Fi, catering, typical rate range, dates available."
+            submitLabel="List my venue"
+            accent="orange"
+          />
+          <div className="text-center mt-10">
             <WouterLink href="/" className="text-orange-400 hover:text-orange-300 transition-colors">
               ← Back to overview
             </WouterLink>

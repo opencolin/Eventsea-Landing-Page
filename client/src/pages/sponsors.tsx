@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import BetaSignupModal from "@/components/beta-signup-modal";
 import { Button } from "@/components/ui/button";
 import { Target, BarChart3, KeyRound, Users, TrendingUp, Eye } from "lucide-react";
+import ListingForm from "@/components/listing-form";
 
 export default function Sponsors() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
@@ -112,7 +113,30 @@ export default function Sponsors() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Tell us what you want to sponsor.</span>{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">We'll match you.</span>
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              ICP, budget, target geographies, anything you care about. We'll surface every upcoming event that fits — plus past events whose audience you want next time.
+            </p>
+          </div>
+          <ListingForm
+            listingType="sponsor-interest"
+            heading="Tell us about your sponsor program"
+            subheading="Name + email so we can reach you, plus what kind of events you want in front of."
+            titlePlaceholder="Sponsor program name (e.g., Nebius AI Infra Sponsorships)"
+            detailsPlaceholder="ICP (e.g., platform engineering leads), budget per event, geos, vertical, types of events (hackathons / meetups / demo days), key dates."
+            submitLabel="Find me events"
+            accent="emerald"
+          />
+          <div className="text-center mt-10">
             <WouterLink href="/" className="text-emerald-400 hover:text-emerald-300 transition-colors">
               ← Back to overview
             </WouterLink>

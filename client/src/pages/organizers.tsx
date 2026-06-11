@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import BetaSignupModal from "@/components/beta-signup-modal";
 import { Button } from "@/components/ui/button";
 import { Sparkles, LayoutDashboard, ClipboardCheck, Trophy, LifeBuoy, QrCode, BarChart3 } from "lucide-react";
+import ListingForm from "@/components/listing-form";
 
 export default function Organizers() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
@@ -116,7 +117,30 @@ export default function Organizers() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">List your event.</span>{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Get sponsors and a venue.</span>
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Drop the basics. We'll match your event to sponsors and venues, and surface it to field marketing teams hunting for events in your space.
+            </p>
+          </div>
+          <ListingForm
+            listingType="event"
+            heading="Tell us about your event"
+            subheading="Name + email so we can reach you, plus a short pitch."
+            titlePlaceholder="Event name (e.g., Frontier AI Hack Week)"
+            detailsPlaceholder="Date, location, expected attendees, sponsor tiers you're looking for, anything else we should know."
+            submitLabel="List my event"
+            accent="blue"
+          />
+          <div className="text-center mt-10">
             <WouterLink href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
               ← Back to overview
             </WouterLink>

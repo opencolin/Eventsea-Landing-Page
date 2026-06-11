@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertBetaSignupSchema, insertDemoRequestSchema, insertCalendarAuditSchema } from "@shared/schema";
+import { insertBetaSignupSchema, insertDemoRequestSchema, insertCalendarAuditSchema, insertMarketplaceListingSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -90,6 +90,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const audits = await storage.getCalendarAudits();
       res.json({ success: true, data: audits });
+    } catch {
+      res.status(500).json({ success: false, message: "Internal server error" });
+    }
+  });
+
+  app.post("/api/marketplace-listing", async (req, res) => {
+    try {
+      const validatedData = insertMarketplaceListingSchema.parse(req.body);
+      const listing = await storage.createMarketplaceListing(validatedData);
+      res.json({ success: true, data: listing });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({
+          success: false,
+          message: "Invalid input data",
+          errors: error.errors
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "Internal server error"
+        });
+      }
+    }
+  });
+
+  app.get("/api/marketplace-listings", async (_req, res) => {
+    try {
+      const listings = await storage.getMarketplaceListings();
+      res.json({ success: true, data: listings });
     } catch {
       res.status(500).json({ success: false, message: "Internal server error" });
     }
