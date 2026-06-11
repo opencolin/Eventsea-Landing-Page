@@ -109,7 +109,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       void forwardAuditToWebhook({
         calendarUrl: validatedData.calendarUrl,
         email: validatedData.email,
-        auditType: validatedData.auditType,
+        auditType: validatedData.auditType ?? "own",
         submittedAt: new Date().toISOString(),
       });
       res.json({ success: true, data: audit });
