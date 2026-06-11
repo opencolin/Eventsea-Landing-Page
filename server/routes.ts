@@ -4,6 +4,57 @@ import { storage } from "./storage";
 import { insertBetaSignupSchema, insertDemoRequestSchema, insertCalendarAuditSchema, insertMarketplaceListingSchema } from "@shared/schema";
 import { z } from "zod";
 
+// Forward a calendar-audit submission to AUDIT_WEBHOOK_URL (e.g. a
+// Slack/Resend incoming webhook) so the founder sees it in real time
+// while the in-memory store still serves the API response. The webhook
+// call is fire-and-forget: failures or missing config never fail the
+// user-facing request.
+async function forwardAuditToWebhook(payload: {
+  calendarUrl: string;
+  email: string | null | undefined;
+  auditType: string;
+  submittedAt: string;
+}): Promise<void> {
+  const webhookUrl = process.env.AUDIT_WEBHOOK_URL;
+  if (!webhookUrl) {
+    console.warn(
+      JSON.stringify({
+        level: "warn",
+        event: "audit_webhook_not_configured",
+        message: "AUDIT_WEBHOOK_URL not set; calendar audit submission stored in memory only.",
+        submittedAt: payload.submittedAt,
+      }),
+    );
+    return;
+  }
+  try {
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) {
+      console.warn(
+        JSON.stringify({
+          level: "warn",
+          event: "audit_webhook_non_2xx",
+          status: response.status,
+          submittedAt: payload.submittedAt,
+        }),
+      );
+    }
+  } catch (err) {
+    console.warn(
+      JSON.stringify({
+        level: "warn",
+        event: "audit_webhook_failed",
+        error: err instanceof Error ? err.message : String(err),
+        submittedAt: payload.submittedAt,
+      }),
+    );
+  }
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/beta-signup", async (req, res) => {
     try {
@@ -51,6 +102,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertCalendarAuditSchema.parse(req.body);
       const audit = await storage.createCalendarAudit(validatedData);
+      // Fire-and-forget the webhook so the response is not blocked on a
+      // slow upstream. We don't await: the in-memory store is the
+      // source of truth for the response, the webhook is the operator
+      // notification channel.
+      void forwardAuditToWebhook({
+        calendarUrl: validatedData.calendarUrl,
+        email: validatedData.email,
+        auditType: validatedData.auditType,
+        submittedAt: new Date().toISOString(),
+      });
       res.json({ success: true, data: audit });
     } catch (error) {
       if (error instanceof z.ZodError) {
