@@ -1,7 +1,7 @@
 # HANDOFF — read this first
 
-> Last updated: 2026-06-11 by Claude (council session).
-> Branch: `claude/builderbase-prd-analysis-0BjXl`.
+> Last updated: 2026-06-11 by Claude (council session + Sprint 1 fan-out).
+> Integration branch: `claude/builderbase-prd-analysis-0BjXl`.
 
 ## What's already in the repo
 
@@ -10,46 +10,77 @@ A shipped landing page for Eventsea, a four-sided event marketplace (organizers,
 Read in this order:
 1. `docs/builderbase-prd-analysis.md` — positioning + gap analysis
 2. `docs/builderbase-clone-plan.md` — original phased clone plan (predates the four-sided goal)
-3. `docs/releases/README.md` — release ladder v0.1 → v2.0
-4. `docs/council/decision.md` — what the founding council decided was next
-5. `docs/releases/v0.2-audit-pipeline.md` — the next release to build
+3. `docs/council/decision.md` — **the canonical "what we're doing right now"**
+4. `docs/releases/README.md` — release ladder v0.1 → v2.0 with current statuses
+5. The release doc you're working on
 
-## What the council decided
+## What the council decided (Sprint 1)
 
-The 4-PM founding council (GTM, Product, Marketing, Founder/Ops) deliberated and produced individual proposals in `docs/council/*-proposal.md`. The synthesized decision lives in `docs/council/decision.md`. **TL;DR**: ship v0.2 (the working audit pipeline) before everything else, because nothing in v0.3+ compounds until the wedge promise is real.
+The 4-PM founding council (GTM, Product, Marketing, Founder/Ops) deliberated. Their individual proposals are in `docs/council/*-proposal.md`. The synthesized decision lives in `docs/council/decision.md`.
 
-## How to pick up
+**TL;DR:** Sprint 1 = sponsor pilot validation (Founder/Ops PM plan) with Show HN amplifier (Marketing PM plan) and honest-page fix (GTM PM plan). Product PM's audit pipeline build is **deferred to Sprint 2, conditional on ≥$5K revenue from Sprint 1.**
 
-If you are a fresh agent inheriting this work, start here:
+Hard non-goals for Sprint 1 are codified in the decision doc — read them before suggesting any work that isn't on the list.
 
-### If you're picking up v0.2
-1. Read `docs/releases/v0.2-audit-pipeline.md` end-to-end.
-2. Check out the v0.2 worktree if it exists: `git worktree list`. If not, create it: `git worktree add ../eventsea-v0.2 release/v0.2-audit-pipeline`.
-3. Walk the "Implementation checklist" in the v0.2 doc. Commit per day.
-4. Use the Claude API skill for the audit generation (see `~/.claude/skills/claude-api` or invoke via the Skill tool).
+## Sprint 1 status — three concurrent worktree workstreams
 
-### If you're picking up v0.3+
-v0.3 cannot start until v0.2 is in a working state. Do not start v0.3 in parallel unless explicitly told to.
+All three were spun up at council time and are running in parallel git worktrees:
 
-### If you're picking up a non-release task
-Anything not in the release ladder (e.g., real testimonials wiring, Calendly link, content marketing) is "background work" and can land on whatever branch is current. Don't open a worktree for these.
+| Workstream | Branch | What it produces | Status |
+|---|---|---|---|
+| Honest-page engineer | `release/v0.1.1-honest-page` | Code fixes: turnaround copy, Calendly env var, audit webhook | Running (will check in on push) |
+| Show HN proof content | `release/v0.1.2-show-hn-proof` | Markdown under `docs/marketing/`: launch playbook, 4 blog posts, sample private audit, target Twitter handles | Running |
+| Sponsor outbound kit | `release/v0.1.3-sponsor-outbound` | Markdown under `docs/gtm/`: target list, pilot offer, 5-touch sequence, discovery script, objection handling, Calendly setup, account brief template | Running |
+
+When these three land, the integration agent merges all into `claude/builderbase-prd-analysis-0BjXl` and the human founder can start the Sprint 1 outbound on the next business day.
+
+## Sprint 2 onward
+
+Branches exist on origin as placeholders. Each has a corresponding spec doc in `docs/releases/`. Pick up whichever the user directs:
+- `release/v0.2-audit-pipeline` — build the real audit pipeline (40 eng-days). CONDITIONAL on Sprint 1 revenue.
+- `release/v0.3-admin-and-outbound` — admin dashboard + Calendly + 20 public audit pages
+- `release/v1.0-multitenant` — auth + orgs + the radar UI port + Stripe
+- `release/v1.5-teams-and-digest` — team workspaces, shared views, weekly digest, Slack app
+- `release/v2.0-marketplace-tx` — Stripe Connect, sponsor matching, venue booking, ROI dashboards
+
+## How to pick up (fresh agent)
+
+### If you're a fresh agent inheriting Sprint 1
+1. `git fetch origin` to see all release branches.
+2. Run `git worktree list` to see what's already checked out.
+3. Read the council decision and the release doc for the workstream you're picking up.
+4. If a worktree exists, `cd` into it. If not, create with `git worktree add ../eventsea-<branch-tail> <branch>`.
+5. Walk the spec doc's implementation checklist.
+
+### If you're the integration agent after Sprint 1 worktrees ship
+1. `git fetch origin` for the three v0.1.x branches.
+2. Merge each into `claude/builderbase-prd-analysis-0BjXl` in order: v0.1.1 → v0.1.3 → v0.1.2.
+3. Resolve merge conflicts conservatively (each branch should touch disjoint files except `docs/releases/README.md`, which is already pre-populated).
+4. Build + commit.
+5. Push. Notify the user.
+
+### If you're picking up Sprint 2 (v0.2 audit pipeline)
+Do NOT start v0.2 until Sprint 1 reports back with revenue numbers. Read the rip cord clause in `docs/council/decision.md` first.
 
 ## Operating rules
 
-- **Worktrees per release**: each `release/v0.X` lives in its own worktree to avoid stomping on others.
-- **Commits per ~30-min chunk**: small commits, descriptive messages, conventional-ish style.
-- **Builds pass before push**: `npx vite build` for client, `npm run check` for tsc (tsc has pre-existing errors in `beta-signup-modal.tsx` and `server/storage.ts` — those are not yours to fix unless you're working on those files explicitly).
+- **Worktrees per release**: each `release/v0.X` lives in its own worktree to avoid stomping.
+- **Small commits**: per-day or per-feature, descriptive messages.
+- **Builds pass before push**: `npx vite build` for client. `npm run check` for tsc (note: pre-existing tsc errors in `beta-signup-modal.tsx` and `server/storage.ts` — not yours to fix unless you're working on those files explicitly).
 - **No destructive git**: no `--force` push, no `reset --hard` without user permission.
 - **Document as you go**: if you change the spec, update the release doc in the same commit.
+- **Do NOT open PRs** unless explicitly asked. The integration agent merges.
 
-## Open questions waiting on the user (don't block on these)
+## Open questions waiting on the user
 
-1. Calendly / SavvyCal link to wire to Book-a-Demo (currently `mailto:` placeholder)
-2. Real customer testimonials + logos for the testimonial section
-3. Final pricing numbers (current page says "draft pricing")
-4. Eventsea legal entity / billing address for Stripe Connect (needed for v2.0)
-5. Whether to integrate the existing `event-radar-mvp.phantastic.ai` prototype into this repo OR keep them as separate services (the council's Product PM has a recommendation in their proposal)
+1. Calendly URL for `VITE_CALENDLY_URL` (will be wired by v0.1.1 worktree)
+2. Slack/Resend webhook URL for `AUDIT_WEBHOOK_URL` (will be wired by v0.1.1 worktree)
+3. Real customer testimonials + logos for the testimonial section (still anonymous on the live page)
+4. Final pricing numbers (current page says "draft pricing")
+5. Real Twitter handles for the named targets — v0.1.2 worktree will mark unknowns as TODO
+6. Eventsea legal entity / billing address for Stripe Connect (needed for v2.0; Founder/Ops PM plans to handle this on Day 18 of Sprint 1)
+7. Approval to run private audits of Nebius/vCluster/Tavily/LanceDB without permission — Marketing PM proposal flags this as a blocker; check with founder before publishing or sending audit content externally
 
 ## Background processes / state
 
-A 30-second heartbeat ticker was started in the original session for self-pacing. It writes to `/tmp/eventsea-heartbeat.log`. You can ignore it; it's purely for the agent's cadence.
+A 30-second heartbeat ticker was started for self-pacing. It writes to `/tmp/eventsea-heartbeat.log`. You can ignore it; it's purely for the agent's cadence.
