@@ -15,6 +15,7 @@
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
 | **v1.0** (marketplace track) | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
 | **v1.0** (skill track) | Planned | Luma API ingestion: auto-pull, auto-diff registrations | (new branch) | [v1.0-luma-api-ingestion.md](./v1.0-luma-api-ingestion.md) |
+| **v1.1-luma-api** | Spec ready | Deepened Luma API ingestion spec (auth/encryption/diff/cost/sequencing) — implementation-ready | `release/prd-v1.1-luma-api` | [v1.1/luma-api-spec.md](./v1.1/luma-api-spec.md) |
 | **v1.5** | Planned | Team workspaces + saved views + weekly digest | `release/v1.5-teams-and-digest` | [v1.5-teams-and-digest.md](./v1.5-teams-and-digest.md) |
 | **v2.0** (marketplace track) | Planned | Marketplace transactions: sponsor matching + venue booking | `release/v2.0-marketplace-tx` | [v2.0-marketplace-tx.md](./v2.0-marketplace-tx.md) |
 | **v2.0** (skill track) | Planned | Autonomous event intelligence: Tavily discovery + Token Factory inference | (new branch) | [v2.0-autonomous-event-intel.md](./v2.0-autonomous-event-intel.md) |
