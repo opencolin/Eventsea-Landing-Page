@@ -1,6 +1,27 @@
 # Sponsor Outreach Target List — Sprint 1
 
-> 25 accounts for the Founder/Ops Sprint 1 outbound. Tiers: **1** = named priority (highest fit + warmth potential), **2** = AI-infra / dev-AI tooling analogs, **3** = stretch (devrel orgs + cloud-startup programs). All 25 get the 5-touch sequence; touch 1 personalization depth scales with tier.
+> 25 accounts originally drafted for the Founder/Ops Sprint 1 outbound. **Post-PRD update (2026-06-11):** per `docs/council/gtm-pivot-pm-proposal.md`, Week 1 active outbound is cut to **6 high-conviction accounts** (4 Tier-1 named + 2 BuilderShip-adjacent sponsors). The other **19 are parked** as a Week-3 conditional wave, triggered only if ≥3 of the 6 produce booked discovery calls by EOD Friday Week 1.
+>
+> Tiers: **1** = named priority (highest fit + warmth potential), **2** = AI-infra / dev-AI tooling analogs, **3** = stretch (devrel orgs + cloud-startup programs). **BuilderShip artifact fit** (high/med/low) added post-PRD: "high" = the account's audience overlaps with BuilderShip's (so the gated dashboard is a peer-credibility instrument, not just a brochure). "Med" / "low" calls graded by reach into hackathon-adjacent dev audiences.
+
+## Week 1 active list (the 6)
+
+The 6 accounts that ship touch-1 on Day 3 of Sprint 1:
+
+| Tier | Account | BuilderShip artifact fit | Reason |
+|---|---|---|---|
+| 1 | Nebius | High | AI infra; named target |
+| 1 | vCluster (Loft Labs) | Med | Platform engineering; named target |
+| 1 | Tavily | High | Agentic AI; named target; sponsor-adjacent to BuilderShip's audience |
+| 1 | LanceDB | High | Vector DB / RAG; named target |
+| 2 | **{{BuilderShip-adjacent sponsor 1}}** | High | Was a sponsor on `list.ship.builders` — peer credibility |
+| 2 | **{{BuilderShip-adjacent sponsor 2}}** | High | Was a sponsor on `list.ship.builders` — peer credibility |
+
+**Founder action (Day 1):** identify the 2 BuilderShip-adjacent sponsors from the `list.ship.builders` sponsor logos and write them into the table above. If neither is in ICP, escalate to a council micro-vote — running with only 4 accounts is the fallback, but the artifact loses peer-credibility leverage without the 2 adjacents.
+
+## Week 3 broadening trigger
+
+The 19 parked accounts (Tiers 2 and 3 below, excluding the 2 adjacents added to Week 1) get touch-1 if and only if **≥3 of the Week-1 6 have booked discovery calls by EOD Friday of Week 1**. If <3, **do NOT broaden** — double down on the 6 with touch 2 and conserve the BuilderShip artifact for Sprint 2 v1 productization. The rip cord per `docs/council/gtm-pivot-pm-proposal.md` re-reads as: *"if 0 verbal yeses across all Sprint 1 outbound (cold + warm + HN inbound) by end of Week 3, pivot to organizer-side $499 validation."*
 
 ## Conventions
 

@@ -119,28 +119,30 @@
 
 ---
 
-## Q5 — Pitch the $7.5K pilot
+## Q5 — Pitch the $12.5K pilot (post-PRD pricing)
 
-> "Based on what you just said about {{their stated budget / measurement gap}}, the pilot I'd recommend is the $7.5K quarterly package. Here's what's in it:"
+> "Based on what you just said about {{their stated budget / measurement gap}}, the pilot I'd recommend is the **$12.5K Package B**. It includes everything you saw in the BuilderShip dashboard — light + deep tier screening, V/P/U verdicts, per-sponsor scoring, the gated lead dashboard — for the events you sponsor next quarter. Here's the staged delivery:"
 
-Walk through Package B from `sponsor-pilot-offer.md`. 90 seconds. Then stop talking.
+Walk through Package B from `sponsor-pilot-offer.md`. Anchor on the Day-1/7/14 staged delivery table. 90 seconds. Then stop talking.
 
 > "Does this make sense as a next step?"
 
 ### What we're listening for
 - The first sentence after you stop talking. If it's a budget question, you're in. If it's a "let me think about it," push for a date.
-- Whether they reframe the price up ($15K) or down ($5K). Both are buying signals — they're shopping.
+- Whether they reframe the price up ($25K Package C) or down ($7.5K Package A). Both are buying signals — they're shopping.
+- Whether they ask about the staged delivery vs. expecting BuilderShip-finished Day 1 — see Objection #7 in `objection-handling.md`.
 
 ### Common objections + responses
 
-See `objection-handling.md` for the long list. The two that come up most on the first pitch:
+See `objection-handling.md` for the long list. The three that come up most on the first pitch:
 
 | They say | You say |
 |---|---|
-| "$7.5K is more than I can sign off on." | "Got it. Package A is $5K — single event, same delivery. Does that fit?" (Don't lower B; offer A.) |
-| "What's the ROI guarantee?" | "Recommendation + 2 organizer intros delivered in 30 days, or your next quarter is free. That's the only guarantee — I can't promise sponsorship outcomes for events you sponsor, since I don't run the events." |
+| "$12.5K is more than I can sign off on." | "Got it. Package A is $7.5K — single event, same screening + dashboard quality, just one event not three. Does that fit?" (Don't lower B; offer A.) |
+| "Will mine look like BuilderShip's by Day 1?" | "By Day 14 — first cycle of the same mechanic. BuilderShip is what 5 cycles look like; yours starts as cycle 1, hits BuilderShip polish by cycle 3-4. The staged delivery is in the proposal." (Long version in objection #7.) |
+| "What's the ROI guarantee?" | "Light tier complete by Day 7, deep tier + dashboard live by Day 14, 3 ranked event recommendations + 2 organizer intros by Day 30 — or your next quarter is free. I can't guarantee sponsorship outcomes from events you sponsor, since I don't run the events." |
 
-**Don't discount Package B below $7.5K.** Offer Package A instead.
+**Don't discount Package B below $12.5K.** Offer Package A at $7.5K instead. The post-PRD anchor change is in `sponsor-pilot-offer.md` § "Sales note (internal, strip before send)" — the BuilderShip artifact justifies the higher anchor.
 
 ---
 
