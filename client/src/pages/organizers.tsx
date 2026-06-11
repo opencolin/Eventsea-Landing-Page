@@ -10,7 +10,7 @@ export default function Organizers() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request%20—%20Organizers";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request%20—%20Organizers";
   };
 
   const features = [
@@ -72,7 +72,7 @@ export default function Organizers() {
             </span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Eventsy is the AI infrastructure for hackathons, meetups, and demo days. Applications, screening, team formation, judging, analytics — one dashboard for every stage.
+            Eventsea is the AI infrastructure for hackathons, meetups, and demo days. Applications, screening, team formation, judging, analytics — one dashboard for every stage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

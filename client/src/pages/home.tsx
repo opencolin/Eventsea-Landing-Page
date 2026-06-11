@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request";
   };
 
   const handleCloseBetaModal = () => {

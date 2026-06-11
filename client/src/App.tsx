@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Organizers from "@/pages/organizers";
 import Sponsors from "@/pages/sponsors";
+import Venues from "@/pages/venues";
+import FieldMarketing from "@/pages/field-marketing";
 import Builders from "@/pages/builders";
 import Events from "@/pages/events";
 import Pricing from "@/pages/pricing";
@@ -17,6 +19,8 @@ function Router() {
       <Route path="/" component={Home}/>
       <Route path="/organizers" component={Organizers}/>
       <Route path="/sponsors" component={Sponsors}/>
+      <Route path="/venues" component={Venues}/>
+      <Route path="/field-marketing" component={FieldMarketing}/>
       <Route path="/builders" component={Builders}/>
       <Route path="/events" component={Events}/>
       <Route path="/pricing" component={Pricing}/>

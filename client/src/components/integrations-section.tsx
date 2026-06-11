@@ -23,7 +23,7 @@ export default function IntegrationsSection() {
     {
       icon: Zap,
       title: "AI Automates",
-      description: "Eventsy handles the cross-platform workflows",
+      description: "Eventsea handles the cross-platform workflows",
       gradient: "from-emerald-500 to-emerald-600"
     },
     {
@@ -54,7 +54,7 @@ export default function IntegrationsSection() {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Eventsy connects with the tools you already use, creating a unified workflow for event management.
+            Eventsea connects with the tools you already use, creating a unified workflow for event management.
           </p>
         </div>
 

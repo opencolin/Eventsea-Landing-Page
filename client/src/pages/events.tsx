@@ -60,7 +60,7 @@ const eventsSeed: EventCard[] = [
     location: "San Francisco, CA",
     date: "May 15",
     attendees: "80 builders",
-    organizer: "Eventsy Community",
+    organizer: "Eventsea Community",
     gradient: "from-pink-500 to-purple-500",
   },
   {
@@ -84,7 +84,7 @@ export default function Events() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request";
   };
 
   return (
@@ -108,7 +108,7 @@ export default function Events() {
             </span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Hackathons, meetups, and demo days powered by Eventsy. Apply in one click. Show up with a verified profile.
+            Hackathons, meetups, and demo days powered by Eventsea. Apply in one click. Show up with a verified profile.
           </p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function Events() {
           <div className="text-center mt-16 glass rounded-2xl p-10 max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-3">Running an event?</h2>
             <p className="text-slate-300 mb-6">
-              List your hackathon, meetup, or demo day on Eventsy. Reach thousands of verified builders and matching sponsors.
+              List your hackathon, meetup, or demo day on Eventsea. Reach thousands of verified builders and matching sponsors.
             </p>
             <WouterLink href="/organizers" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
               See how it works →

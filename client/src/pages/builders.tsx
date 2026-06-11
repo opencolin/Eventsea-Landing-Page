@@ -10,7 +10,7 @@ export default function Builders() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request%20—%20Builders";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request%20—%20Builders";
   };
 
   const features = [
@@ -37,12 +37,12 @@ export default function Builders() {
     {
       icon: Github,
       title: "Submissions wired to GitHub",
-      description: "Ship via the tools you already use. Eventsy verifies your repo, pulls the README, and makes judging easy for the panel.",
+      description: "Ship via the tools you already use. Eventsea verifies your repo, pulls the README, and makes judging easy for the panel.",
     },
     {
       icon: Award,
       title: "Ranking that means something",
-      description: "Rubric-based scores from verified judges. Your results on Eventsy travel with you — to recruiters, communities, and your next event.",
+      description: "Rubric-based scores from verified judges. Your results on Eventsea travel with you — to recruiters, communities, and your next event.",
     },
   ];
 

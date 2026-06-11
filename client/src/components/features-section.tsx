@@ -1,49 +1,49 @@
-import { MapPin, DollarSign, Mic, Clipboard, Mail, Users } from "lucide-react";
+import { Search, Sliders, BarChart3, BookmarkCheck, Repeat, FileDown } from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
     {
-      icon: MapPin,
-      title: "AI Venue Finder",
-      description: "Finds venues that fit your vibe, budget, and capacity. No more endless venue hunting.",
+      icon: Search,
+      title: "Hybrid semantic search",
+      description: "248 events from 17 sources, indexed in LanceDB. Search by intent (\"platform engineering AI workloads\") or keyword and get the right events in milliseconds.",
       gradient: "from-blue-500 to-blue-600",
-      hoverColor: "hover:border-blue-500/30"
+      hoverColor: "hover:border-blue-500/30",
     },
     {
-      icon: DollarSign,
-      title: "Sponsorship CRM",
-      description: "Auto-generates proposals, sends DocuSign agreements, tracks payments. Revenue on autopilot.",
+      icon: Sliders,
+      title: "Score events against your ICP",
+      description: "Tunable filters — AI Infra Relevance, Cloud-Native, Enterprise Buyer Density, your own. Sliders recompute the ranking instantly. Even negate filters (\"closed source only\").",
       gradient: "from-emerald-500 to-emerald-600",
-      hoverColor: "hover:border-emerald-500/30"
+      hoverColor: "hover:border-emerald-500/30",
     },
     {
-      icon: Mic,
-      title: "Speaker Ops",
-      description: "Schedule talks, collect bios, auto-send logistics. Keep speakers happy and organized.",
+      icon: BarChart3,
+      title: "\"Why it ranked here\" explainability",
+      description: "Every score breaks down per filter into raw signal, confidence, and adjustment. Defensible to your CMO, debuggable for your analyst.",
       gradient: "from-purple-500 to-purple-600",
-      hoverColor: "hover:border-purple-500/30"
+      hoverColor: "hover:border-purple-500/30",
     },
     {
-      icon: Clipboard,
-      title: "Run of Show Builder",
-      description: "Drag-and-drop agenda with calendar sync. Perfect timing, every time.",
+      icon: BookmarkCheck,
+      title: "P1 / P2 / P3 with notes",
+      description: "Mark every event act / watch / track. Drop a rationale. Save filter sets as named team views — vcluster GTM, Platform Leads, AI Infra Builders.",
       gradient: "from-blue-500 to-indigo-600",
-      hoverColor: "hover:border-blue-500/30"
+      hoverColor: "hover:border-blue-500/30",
     },
     {
-      icon: Mail,
-      title: "Email Engine",
-      description: "Sends AI-written emails based on guest preferences and past attendance.",
+      icon: Repeat,
+      title: "Sponsor + venue matchmaking",
+      description: "Sponsors get surfaced events that match their stack and audience. Venues get inbound from vetted organizers. Two-sided liquidity, AI-routed.",
       gradient: "from-emerald-500 to-teal-600",
-      hoverColor: "hover:border-emerald-500/30"
+      hoverColor: "hover:border-emerald-500/30",
     },
     {
-      icon: Users,
-      title: "Smart Waitlists",
-      description: "Auto-promote high-priority guests and notify instantly. Never miss a VIP.",
+      icon: FileDown,
+      title: "CSV export & weekly digest",
+      description: "Export your ranked event list in one click. Each teammate gets a personalized weekly digest of events that match their target accounts.",
       gradient: "from-orange-500 to-red-600",
-      hoverColor: "hover:border-orange-500/30"
-    }
+      hoverColor: "hover:border-orange-500/30",
+    },
   ];
 
   return (
@@ -52,21 +52,21 @@ export default function FeaturesSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">
             <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            <span className="text-sm text-emerald-300 font-medium">What You Get</span>
+            <span className="text-sm text-emerald-300 font-medium">The Eventsea engine</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-              Everything you need to
+              AI-ranked, ICP-scored,
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              run amazing events
+              team-shared.
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Eventsy's AI handles the tedious stuff so you can focus on creating memorable experiences for your community.
+            One engine ingests every event from every source, scores it against your ICP, and routes it to the right side of the table — organizer, sponsor, venue, or field marketer.
           </p>
         </div>
 

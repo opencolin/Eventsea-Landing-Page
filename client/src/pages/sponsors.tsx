@@ -10,19 +10,19 @@ export default function Sponsors() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Demo%20request%20—%20Sponsors";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request%20—%20Sponsors";
   };
 
   const features = [
     {
       icon: Target,
       title: "Reach the right builders",
-      description: "Eventsy matches your sponsor budget to events that fit your audience — tech stack, location, size. Skip the cold outreach.",
+      description: "Eventsea matches your sponsor budget to events that fit your audience — tech stack, location, size. Skip the cold outreach.",
     },
     {
       icon: KeyRound,
       title: "Credit distribution, verified",
-      description: "Drop API keys, promo codes, and credits once. Eventsy delivers them to accepted participants and tracks every allocation.",
+      description: "Drop API keys, promo codes, and credits once. Eventsea delivers them to accepted participants and tracks every allocation.",
     },
     {
       icon: BarChart3,
@@ -67,7 +67,7 @@ export default function Sponsors() {
             </span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Skip the guesswork. Eventsy matches your dollars to the right hackathons, meetups, and demo days — then shows you exactly what got built on your stack.
+            Skip the guesswork. Eventsea matches your dollars to the right hackathons, meetups, and demo days — then shows you exactly what got built on your stack.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

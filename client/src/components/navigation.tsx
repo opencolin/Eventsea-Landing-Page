@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link as WouterLink, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -8,19 +8,26 @@ interface NavigationProps {
   onBookDemo: () => void;
 }
 
-const navLinks = [
-  { href: "/organizers", label: "Organizers" },
-  { href: "/sponsors", label: "Sponsors" },
-  { href: "/builders", label: "Builders" },
+const audienceLinks = [
+  { href: "/organizers", label: "Organizers", description: "List & run events" },
+  { href: "/sponsors", label: "Sponsors", description: "Find ICP-fit events" },
+  { href: "/venues", label: "Venues", description: "Fill your calendar" },
+  { href: "/field-marketing", label: "Field Marketing", description: "Score every event" },
+  { href: "/builders", label: "Builders", description: "Discover & attend" },
+];
+
+const topLinks = [
   { href: "/events", label: "Events" },
   { href: "/pricing", label: "Pricing" },
 ];
 
 export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isForDropdownOpen, setIsForDropdownOpen] = useState(false);
   const [location] = useLocation();
 
   const closeMobile = () => setIsMobileMenuOpen(false);
+  const isAudienceActive = audienceLinks.some((l) => l.href === location);
 
   return (
     <nav className="fixed top-0 w-full z-50 glass">
@@ -33,13 +40,53 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
               </svg>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Eventsy
+              Eventsea
             </span>
           </WouterLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => {
+            <div
+              className="relative"
+              onMouseEnter={() => setIsForDropdownOpen(true)}
+              onMouseLeave={() => setIsForDropdownOpen(false)}
+            >
+              <button
+                className={`flex items-center space-x-1 transition-colors text-sm ${
+                  isAudienceActive ? "text-white font-medium" : "text-slate-300 hover:text-white"
+                }`}
+                data-testid="nav-for"
+              >
+                <span>For</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {isForDropdownOpen && (
+                <div className="absolute top-full left-0 pt-3 w-72">
+                  <div className="glass rounded-xl p-2 border border-slate-700/50 shadow-2xl">
+                    {audienceLinks.map((link) => {
+                      const isActive = location === link.href;
+                      return (
+                        <WouterLink
+                          key={link.href}
+                          href={link.href}
+                          className={`block px-4 py-3 rounded-lg transition-colors ${
+                            isActive ? "bg-blue-500/10" : "hover:bg-slate-800/50"
+                          }`}
+                          data-testid={`nav-${link.label.toLowerCase().replace(" ", "-")}`}
+                        >
+                          <div className={`font-medium text-sm ${isActive ? "text-blue-300" : "text-white"}`}>
+                            {link.label}
+                          </div>
+                          <div className="text-xs text-slate-400 mt-0.5">{link.description}</div>
+                        </WouterLink>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {topLinks.map((link) => {
               const isActive = location === link.href;
               return (
                 <WouterLink
@@ -54,6 +101,7 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
                 </WouterLink>
               );
             })}
+
             <Button
               onClick={onBookDemo}
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
@@ -77,7 +125,21 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md rounded-b-lg">
-              {navLinks.map((link) => (
+              <div className="px-3 pt-2 pb-1 text-xs uppercase tracking-wider text-slate-500">For</div>
+              {audienceLinks.map((link) => (
+                <WouterLink
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobile}
+                  className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors w-full text-left"
+                  data-testid={`mobile-nav-${link.label.toLowerCase().replace(" ", "-")}`}
+                >
+                  {link.label}
+                  <span className="text-xs text-slate-500 ml-2">{link.description}</span>
+                </WouterLink>
+              ))}
+              <div className="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-slate-500">Explore</div>
+              {topLinks.map((link) => (
                 <WouterLink
                   key={link.href}
                   href={link.href}
@@ -93,7 +155,7 @@ export default function Navigation({ onJoinBeta, onBookDemo }: NavigationProps) 
                   closeMobile();
                   onBookDemo();
                 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors w-full"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors w-full mt-2"
                 data-testid="mobile-nav-book-demo"
               >
                 Book Demo

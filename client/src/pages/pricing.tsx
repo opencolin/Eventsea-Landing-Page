@@ -74,7 +74,7 @@ export default function Pricing() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
-    window.location.href = "mailto:hello@eventsy.ai?subject=Scale%20plan%20inquiry";
+    window.location.href = "mailto:hello@eventsea.ai?subject=Scale%20plan%20inquiry";
   };
 
   return (
@@ -159,7 +159,7 @@ export default function Pricing() {
 
           <div className="text-center mt-16">
             <p className="text-slate-400 mb-4">
-              Questions? Email us at <a href="mailto:hello@eventsy.ai" className="text-blue-400 hover:text-blue-300">hello@eventsy.ai</a>
+              Questions? Email us at <a href="mailto:hello@eventsea.ai" className="text-blue-400 hover:text-blue-300">hello@eventsea.ai</a>
             </p>
             <WouterLink href="/" className="text-slate-500 hover:text-slate-300 transition-colors">
               ← Back to overview
