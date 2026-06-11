@@ -10,6 +10,11 @@ export default function FieldMarketing() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
+    if (calendlyUrl) {
+      window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request%20—%20Field%20Marketing";
   };
 

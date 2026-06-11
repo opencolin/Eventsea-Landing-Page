@@ -121,6 +121,11 @@ export default function Events() {
 
   const handleJoinBeta = () => setIsBetaModalOpen(true);
   const handleBookDemo = () => {
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
+    if (calendlyUrl) {
+      window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     window.location.href = "mailto:hello@eventsea.ai?subject=Demo%20request";
   };
 
