@@ -48,17 +48,18 @@ You will likely discover during this exercise that some of the 25 don't fit. **D
 
 ---
 
-## Record the radar Loom (~30 min)
+## Surface the BuilderShip evidence (~30 min)
 
-Per the GTM PM proposal, every touch-1 email includes a ≤90-second Loom of the Event Radar prototype filtered to the recipient's ICP.
+**Per `docs/council/addendum-prd-validation.md`, the wedge is already validated by two real pilots.** Use that, not just the radar prototype.
 
-- [ ] Open Event Radar MVP. Pre-set 4 saved views, one per named target's ICP:
-  - "Nebius ICP" — vector DB / RAG infra weighted
-  - "vCluster ICP" — Kubernetes / platform engineering weighted
-  - "Tavily ICP" — agent infra / web search / LLM tooling
-  - "LanceDB ICP" — vector DB / RAG infra
-- [ ] Record one Loom per saved view (4 Looms total). Each ≤90 sec, says: "Here's an upcoming event list scored for {target}, top 5 are…"
-- [ ] Drop the Loom URLs into the corresponding `docs/gtm/briefs/<account>.md` files.
+- [ ] Confirm `list.ship.builders` is reachable and the password works. Test it.
+- [ ] Decide which artifact to send per account:
+  - **Option A** (preferred when permission allows): direct link to `list.ship.builders` + the password, scoped to a sponsor-relevant filter, in touch 1.
+  - **Option B** (when permission is restricted): a 1-page screenshot tour of the BuilderShip dashboard's structure (no PII).
+  - **Option C** (cold targets with no warm intro): a Loom walking through the same BuilderShip dashboard with the camera on the founder.
+- [ ] For each of the 4 named targets, write into the brief: *"For BuilderShip we screened 726 attendees in 90/636 deep/light tiers, 327 V / 237 P / 41 U, caught ~15 competitors and 97 strong leads invisible in the raw CSV. Here's the comparable artifact for your last sponsored event…"*
+
+Optional but worth it: pre-set 4 Event Radar saved views (one per named target's ICP) and capture a ≤90s Loom each — the radar is the *forward-looking* artifact, paired with the BuilderShip dashboard as the *backward-looking* artifact.
 
 ---
 

@@ -5,16 +5,18 @@
 
 ## What's already in the repo
 
-A shipped landing page for Eventsea, a four-sided event marketplace (organizers, sponsors, venues, field marketing). Backend uses MemStorage. The real product (Event Radar MVP) lives separately at `event-radar-mvp.phantastic.ai` — not in this repo.
+A shipped landing page for Eventsea, a four-sided event marketplace (organizers, sponsors, venues, field marketing). Backend uses MemStorage. The lead-analysis pipeline that the PRD productizes has run manually for two pilots (SIA Hackathon, BuilderShip 726-person hackathon) — the dashboards live at `list.ship.builders` and the workflow lives in `.claude/skills/event-leads/SKILL.md`. The radar prototype (a different surface) lives separately at `event-radar-mvp.phantastic.ai`.
 
 Read in this order:
-1. `docs/builderbase-prd-analysis.md` — positioning + gap analysis
-2. `docs/builderbase-clone-plan.md` — original phased clone plan (predates the four-sided goal)
-3. `docs/council/decision.md` — **the canonical "what we're doing right now"**
-4. `docs/releases/README.md` — release ladder v0.1 → v2.0 with current statuses (now with two parallel tracks)
-5. `.claude/skills/event-leads/SKILL.md` — the project-scoped skill that IS the operational SOP for Sprint 1 pilot delivery AND the canonical product roadmap (v1 CSV → v1.1 Luma API → v2 autonomous)
-6. `docs/operations/sponsor-pilot-delivery.md` — how to invoke the skill when a Sprint 1 pilot signs
-7. The release doc you're working on
+1. **`docs/PRD.md` — CANONICAL product spec, draft v1, validated by two manual pilots (SIA, BuilderShip). Prototype live at `list.ship.builders`. Read first.**
+2. `docs/council/addendum-prd-validation.md` — material update to the Sprint 1 calculus given the PRD's pilot evidence
+3. `.claude/skills/event-leads/SKILL.md` — the project-scoped skill: operational SOP for delivering pilots AND the product roadmap (mirrors PRD § 4)
+4. `docs/operations/sponsor-pilot-delivery.md` — how to invoke the skill when a Sprint 1 pilot signs
+5. `docs/council/decision.md` — Sprint 1 priority. Read alongside the addendum.
+6. `docs/builderbase-prd-analysis.md` — positioning + gap analysis (predates the PRD; useful for landing-page context)
+7. `docs/builderbase-clone-plan.md` — original phased clone plan (predates the four-sided goal; mostly superseded)
+8. `docs/releases/README.md` — release ladder v0.1 → v2.0 with current statuses (now with two parallel tracks)
+9. The release doc you're working on
 
 ## What the council decided (Sprint 1)
 
