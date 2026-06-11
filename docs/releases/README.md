@@ -12,6 +12,7 @@
 | **v0.1.3** | Shipped | Sponsor outbound kit (25-target list, 5-touch sequence, pilot offer, objection handling, discovery script) | `release/v0.1.3-sponsor-outbound` (merged) | (see `docs/gtm/`) |
 | **v0.2** (marketplace track) | Planned (Sprint 2, conditional) | Make the calendar-audit wedge real: working calendar audit pipeline | `release/v0.2-audit-pipeline` | [v0.2-audit-pipeline.md](./v0.2-audit-pipeline.md) |
 | **v0.2** (skill track) | Planned (Sprint 2, conditional) | Productize the event-leads skill: CSV upload → ranked sponsor leads dashboard | (new branch) | [v0.2-lead-analysis-csv.md](./v0.2-lead-analysis-csv.md) |
+| **v1-csv-upload** (skill track) | Week 1 in flight | PRD v1 — productize the event-leads skill: CSV upload → FR9 gated dashboard. 6-week build sequence per `../council/decision-2.md`. | `release/prd-v1-csv-upload` | [v1/week-1-acceptance.md](./v1/week-1-acceptance.md) |
 | **v0.3** | Planned | Admin + outbound + first 5 design partners | `release/v0.3-admin-and-outbound` | [v0.3-admin-and-outbound.md](./v0.3-admin-and-outbound.md) |
 | **v1.0** (marketplace track) | Planned | First paying customer + multi-tenant prod app | `release/v1.0-multitenant` | [v1.0-multitenant.md](./v1.0-multitenant.md) |
 | **v1.0** (skill track) | Planned | Luma API ingestion: auto-pull, auto-diff registrations | (new branch) | [v1.0-luma-api-ingestion.md](./v1.0-luma-api-ingestion.md) |
