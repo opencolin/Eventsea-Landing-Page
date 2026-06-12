@@ -14,7 +14,7 @@
 import type { Request, Response, NextFunction, RequestHandler } from "express";
 import crypto from "crypto";
 import { storage } from "../storage";
-import type { Event } from "@shared/schema";
+import type { Event } from "../../shared/schema";
 
 declare module "express-serve-static-core" {
   interface Request {
