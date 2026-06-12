@@ -140,7 +140,7 @@ export default function CalendarAuditForm({ variant = "hero" }: CalendarAuditFor
             type="url"
             value={calendarUrl}
             onChange={(e) => setCalendarUrl(e.target.value)}
-            placeholder="lu.ma/your-calendar"
+            placeholder="lu.ma/your-calendar or lu.ma/your-event"
             className="w-full bg-slate-900/60 border border-slate-700 rounded-lg pl-12 pr-4 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
             data-testid="audit-url-input"
           />
@@ -170,7 +170,7 @@ export default function CalendarAuditForm({ variant = "hero" }: CalendarAuditFor
       )}
 
       <div className="text-xs text-slate-500 mt-3">
-        Free · No signup to start · Works with Luma, Eventbrite, and partner calendars
+        Free · No signup to start · Paste a Luma calendar or any Luma event URL — we'll find the calendar from the event page
       </div>
     </div>
   );

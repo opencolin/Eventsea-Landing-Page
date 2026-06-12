@@ -11,7 +11,7 @@ import {
   type InsertMarketplaceListing,
   type Event,
   type InsertEvent,
-} from "@shared/schema";
+} from "../shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
