@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/navigation";
+import CosmicHero from "@/components/globe-hero/cosmic-hero";
 import HeroSection from "@/components/hero-section";
 import AuditDeliverablesSection from "@/components/audit-deliverables-section";
 import MarketplaceLoopSection from "@/components/marketplace-loop-section";
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Navigation onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
+      <CosmicHero onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <HeroSection onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <AuditDeliverablesSection />
       <MarketplaceLoopSection />
