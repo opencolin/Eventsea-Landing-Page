@@ -5,8 +5,9 @@ import Footer from "@/components/footer";
 import BetaSignupModal from "@/components/beta-signup-modal";
 import { MapPin, Calendar, Users, DollarSign, Building2, Check } from "lucide-react";
 
-type EventKind = "Hackathon" | "Meetup" | "Demo Day";
+type EventKind = "Hackathon" | "Meetup" | "Demo Day" | "Workshop" | "Conference";
 type MarketStatus = "sponsor-open" | "venue-needed" | "sold-out" | "newly-listed";
+type Community = "DablClub" | "Nebius" | "ClawCamp";
 
 interface EventCard {
   title: string;
@@ -15,79 +16,228 @@ interface EventCard {
   date: string;
   attendees: string;
   organizer: string;
+  community: Community;
   gradient: string;
   marketStatuses: MarketStatus[];
+  lumaUrl: string;
   sponsorTiers?: string;
   venue?: string;
 }
 
+// Real upcoming events pulled from the DablClub, Nebius Builders, and ClawCamp
+// Luma calendars (dablclub.com/events, luma.com/nebiusAI, claw.camp/events).
 const eventsSeed: EventCard[] = [
+  // ── DablClub ───────────────────────────────────────────────────────────
   {
-    title: "Frontier AI Hack Week",
-    kind: "Hackathon",
+    title: "AI Engineer Happy Hour @ Sandbox VR",
+    kind: "Meetup",
     location: "San Francisco, CA",
-    date: "Jun 14–16",
-    attendees: "500 builders",
-    organizer: "Frontier Tower",
+    date: "Jun 30",
+    attendees: "222 builders",
+    organizer: "Dabl Club",
+    community: "DablClub",
     gradient: "from-blue-500 to-emerald-500",
-    marketStatuses: ["sponsor-open"],
-    sponsorTiers: "Title $25k · Tracks $5k · Lunch $1k",
-    venue: "Frontier Tower SF",
+    marketStatuses: ["newly-listed"],
+    lumaUrl: "https://luma.com/sandboxvr",
   },
   {
-    title: "Open Source LLM Meetup",
-    kind: "Meetup",
-    location: "New York, NY",
-    date: "May 22",
-    attendees: "120 builders",
-    organizer: "Hugging Face Community",
-    gradient: "from-emerald-500 to-teal-500",
-    marketStatuses: ["sponsor-open", "venue-needed"],
-    sponsorTiers: "Food sponsor $500",
-  },
-  {
-    title: "YC Spring Demo Day",
-    kind: "Demo Day",
-    location: "Remote",
-    date: "Jun 5",
-    attendees: "3,000 viewers",
-    organizer: "Y Combinator",
-    gradient: "from-orange-500 to-red-500",
-    marketStatuses: ["sold-out"],
-  },
-  {
-    title: "Crypto x Agents Hackathon",
+    title: "Worlds in Action Hack [02-LA]",
     kind: "Hackathon",
-    location: "Denver, CO",
-    date: "May 30–Jun 1",
-    attendees: "1,200 builders",
-    organizer: "ETHDenver",
+    location: "Los Angeles, CA",
+    date: "Jul 2",
+    attendees: "Builders",
+    organizer: "Dabl Club",
+    community: "DablClub",
     gradient: "from-purple-500 to-blue-500",
-    marketStatuses: ["sponsor-open", "newly-listed"],
-    sponsorTiers: "Booth $10k · API credits sponsor $2k",
-    venue: "Mile High Stadium Hall A",
+    marketStatuses: ["sponsor-open"],
+    lumaUrl: "https://luma.com/y07m54en",
   },
   {
-    title: "Bay Area Devtools Night",
+    title: "AI Dev Tool Demo Night @ Auth0 (#5)",
+    kind: "Demo Day",
+    location: "San Francisco, CA",
+    date: "Jul 8",
+    attendees: "425 builders",
+    organizer: "Dabl Club",
+    community: "DablClub",
+    gradient: "from-orange-500 to-red-500",
+    marketStatuses: ["sponsor-open"],
+    sponsorTiers: "Demo slot · Food sponsor",
+    venue: "Auth0 SF",
+    lumaUrl: "https://luma.com/devtooldemo5",
+  },
+  {
+    title: "Marketing Agents in Production: Session 3",
+    kind: "Workshop",
+    location: "Online",
+    date: "Jul 9",
+    attendees: "Virtual",
+    organizer: "Dabl Club",
+    community: "DablClub",
+    gradient: "from-cyan-500 to-blue-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/vu55gimo",
+  },
+  {
+    title: "AGI Summit 2026 Hackathon",
+    kind: "Hackathon",
+    location: "San Francisco, CA",
+    date: "Jul 18",
+    attendees: "Builders",
+    organizer: "Dabl Club",
+    community: "DablClub",
+    gradient: "from-emerald-500 to-teal-500",
+    marketStatuses: ["sponsor-open", "newly-listed"],
+    lumaUrl: "https://luma.com/genaihackathon",
+  },
+  {
+    title: "Ethereum's 11th Birthday Party",
     kind: "Meetup",
     location: "San Francisco, CA",
-    date: "May 15",
-    attendees: "80 builders",
-    organizer: "Eventsea Community",
-    gradient: "from-pink-500 to-purple-500",
-    marketStatuses: ["venue-needed"],
+    date: "Jul 25",
+    attendees: "Community",
+    organizer: "Dabl Club",
+    community: "DablClub",
+    gradient: "from-indigo-500 to-purple-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/agent-yhoj",
+  },
+  // ── Nebius Builders ────────────────────────────────────────────────────
+  {
+    title: "BuilderShip — Yacht Hackathon",
+    kind: "Hackathon",
+    location: "San Francisco, CA",
+    date: "Flagship",
+    attendees: "726 registrants",
+    organizer: "Composio · Nebius · Tavily",
+    community: "Nebius",
+    gradient: "from-sky-500 to-indigo-500",
+    marketStatuses: ["sponsor-open"],
+    sponsorTiers: "$50K credits · DGX Spark for the winner",
+    venue: "South Beach Harbor",
+    lumaUrl: "https://luma.com/ship.builders",
   },
   {
-    title: "University Build Showcase",
-    kind: "Demo Day",
-    location: "Cambridge, MA",
-    date: "Jun 8",
-    attendees: "400 attendees",
-    organizer: "MIT Sandbox",
-    gradient: "from-yellow-500 to-orange-500",
+    title: "Build an Agentic Slack Bot with OpenClaw, Nebius & Tavily",
+    kind: "Workshop",
+    location: "Online",
+    date: "Recurring",
+    attendees: "Virtual",
+    organizer: "Nebius Builders",
+    community: "Nebius",
+    gradient: "from-blue-500 to-cyan-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/82ompy1u",
+  },
+  {
+    title: "Building Secure AI Agents with NVIDIA NemoClaw",
+    kind: "Workshop",
+    location: "Online",
+    date: "Recurring",
+    attendees: "Virtual",
+    organizer: "Nebius Builders",
+    community: "Nebius",
+    gradient: "from-green-500 to-emerald-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/r16tprwv",
+  },
+  {
+    title: "Nebius Builders · Events Calendar",
+    kind: "Conference",
+    location: "Global",
+    date: "Ongoing",
+    attendees: "Open calendar",
+    organizer: "Nebius Builders",
+    community: "Nebius",
+    gradient: "from-slate-500 to-sky-500",
+    marketStatuses: ["sponsor-open"],
+    lumaUrl: "https://luma.com/nebiusAI",
+  },
+  // ── ClawCamp ───────────────────────────────────────────────────────────
+  {
+    title: "ClawCon Dublin",
+    kind: "Meetup",
+    location: "Dublin, Ireland",
+    date: "Jul 1",
+    attendees: "Community",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-rose-500 to-orange-500",
+    marketStatuses: [],
+    venue: "Dogpatch Labs",
+    lumaUrl: "https://luma.com/clawcondublin",
+  },
+  {
+    title: "Future Caribbean: 3-Week Global Buildathon",
+    kind: "Hackathon",
+    location: "Caribbean · Virtual",
+    date: "Jul 6–27",
+    attendees: "$120K prize pool",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-teal-500 to-cyan-500",
     marketStatuses: ["sponsor-open", "newly-listed"],
-    sponsorTiers: "Career fair booth $3k",
-    venue: "MIT Media Lab",
+    lumaUrl: "https://clawcamp.us/event/future-caribbean/",
+  },
+  {
+    title: "NWA Agent Builders",
+    kind: "Meetup",
+    location: "Bentonville, AR",
+    date: "Jul 6",
+    attendees: "Local builders",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-amber-500 to-orange-500",
+    marketStatuses: ["venue-needed"],
+    lumaUrl: "https://luma.com/nbjuhae4",
+  },
+  {
+    title: "ClawMax.ai × Mango Grove Estate Workshop #1",
+    kind: "Workshop",
+    location: "Miami, FL",
+    date: "Jul 7",
+    attendees: "Hands-on",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-pink-500 to-rose-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/clawmax-mangogrove1",
+  },
+  {
+    title: "ClawMax.ai × Mango Grove Estate Workshop #2",
+    kind: "Workshop",
+    location: "Miami, FL",
+    date: "Jul 13",
+    attendees: "Hands-on",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-pink-500 to-purple-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/clawmax-mangogrove2",
+  },
+  {
+    title: "ClawCamp SF Summer Camp Week",
+    kind: "Conference",
+    location: "San Francisco, CA",
+    date: "Aug 1–9",
+    attendees: "78 campers",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-red-500 to-orange-500",
+    marketStatuses: ["sponsor-open", "newly-listed"],
+    lumaUrl: "https://luma.com/clawcamp-passport",
+  },
+  {
+    title: "ClawCon Stockholm",
+    kind: "Meetup",
+    location: "Stockholm, Sweden",
+    date: "Sep 8",
+    attendees: "Community",
+    organizer: "ClawCamp",
+    community: "ClawCamp",
+    gradient: "from-blue-500 to-indigo-500",
+    marketStatuses: [],
+    lumaUrl: "https://luma.com/clawconstockholm",
   },
 ];
 
@@ -95,6 +245,14 @@ const kindChipColor: Record<EventKind, string> = {
   Hackathon: "bg-blue-500/10 border-blue-500/30 text-blue-300",
   Meetup: "bg-emerald-500/10 border-emerald-500/30 text-emerald-300",
   "Demo Day": "bg-orange-500/10 border-orange-500/30 text-orange-300",
+  Workshop: "bg-violet-500/10 border-violet-500/30 text-violet-300",
+  Conference: "bg-cyan-500/10 border-cyan-500/30 text-cyan-300",
+};
+
+const communityChipColor: Record<Community, string> = {
+  DablClub: "bg-blue-500/10 border-blue-500/30 text-blue-200",
+  Nebius: "bg-sky-500/10 border-sky-500/30 text-sky-200",
+  ClawCamp: "bg-rose-500/10 border-rose-500/30 text-rose-200",
 };
 
 const marketBadge: Record<MarketStatus, { label: string; className: string }> = {
@@ -104,16 +262,29 @@ const marketBadge: Record<MarketStatus, { label: string; className: string }> = 
   "newly-listed": { label: "New", className: "bg-blue-500/15 border-blue-500/30 text-blue-200" },
 };
 
-type Filter = "all" | EventKind | "sponsor-open" | "venue-needed";
+type Filter =
+  | "all"
+  | Community
+  | EventKind
+  | "sponsor-open"
+  | "venue-needed";
 
 const filterLabels: Record<Filter, string> = {
   all: "All events",
+  DablClub: "Dabl Club",
+  Nebius: "Nebius",
+  ClawCamp: "ClawCamp",
   Hackathon: "Hackathons",
   Meetup: "Meetups",
   "Demo Day": "Demo days",
+  Workshop: "Workshops",
+  Conference: "Conferences",
   "sponsor-open": "Looking for sponsors",
   "venue-needed": "Looking for a venue",
 };
+
+const communities: Community[] = ["DablClub", "Nebius", "ClawCamp"];
+const kinds: EventKind[] = ["Hackathon", "Meetup", "Demo Day", "Workshop", "Conference"];
 
 export default function Events() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
@@ -131,10 +302,13 @@ export default function Events() {
 
   const filtered = useMemo(() => {
     if (filter === "all") return eventsSeed;
-    if (filter === "Hackathon" || filter === "Meetup" || filter === "Demo Day") {
+    if ((communities as string[]).includes(filter)) {
+      return eventsSeed.filter((e) => e.community === filter);
+    }
+    if ((kinds as string[]).includes(filter)) {
       return eventsSeed.filter((e) => e.kind === filter);
     }
-    return eventsSeed.filter((e) => e.marketStatuses.includes(filter));
+    return eventsSeed.filter((e) => e.marketStatuses.includes(filter as MarketStatus));
   }, [filter]);
 
   return (
@@ -185,9 +359,23 @@ export default function Events() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((event, index) => (
-              <div key={index} className="glass rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all group flex flex-col">
+              <a
+                key={index}
+                href={event.lumaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all group flex flex-col"
+                data-testid={`event-card-${index}`}
+              >
                 <div className={`h-32 bg-gradient-to-br ${event.gradient} relative`}>
-                  <div className="absolute top-3 right-3 flex flex-wrap gap-1 justify-end max-w-[60%]">
+                  <div className="absolute top-3 left-3">
+                    <span
+                      className={`text-[10px] px-2 py-0.5 rounded-full border backdrop-blur-sm ${communityChipColor[event.community]}`}
+                    >
+                      {event.community}
+                    </span>
+                  </div>
+                  <div className="absolute top-3 right-3 flex flex-wrap gap-1 justify-end max-w-[55%]">
                     {event.marketStatuses.map((s) => (
                       <span
                         key={s}
@@ -231,11 +419,12 @@ export default function Events() {
                       </div>
                     )}
                   </div>
-                  <div className="mt-auto pt-4 border-t border-slate-800 text-xs text-slate-500">
-                    Organized by {event.organizer}
+                  <div className="mt-auto pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500">
+                    <span>Organized by {event.organizer}</span>
+                    <span className="text-blue-300 group-hover:text-blue-200">RSVP on Luma →</span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
