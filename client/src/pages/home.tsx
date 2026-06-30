@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/navigation";
 import CosmicHero from "@/components/globe-hero/cosmic-hero";
+import LeadsVsInvoiceSection from "@/components/leads-vs-invoice-section";
 import HeroSection from "@/components/hero-section";
 import AuditDeliverablesSection from "@/components/audit-deliverables-section";
 import MarketplaceLoopSection from "@/components/marketplace-loop-section";
@@ -36,6 +37,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Navigation onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <CosmicHero onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
+      <LeadsVsInvoiceSection onJoinBeta={handleJoinBeta} />
       <HeroSection onJoinBeta={handleJoinBeta} onBookDemo={handleBookDemo} />
       <AuditDeliverablesSection />
       <MarketplaceLoopSection />
